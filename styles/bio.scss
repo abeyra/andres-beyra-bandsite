@@ -1,7 +1,108 @@
+@use 'partials/colors' as *; 
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    display: flex;    
+    font-family: Avenir Next, Arial, Helvetica, sans-serif;
+}
+
+.header {
+    // display: flex; 
+    // flex-direction: column;
+    &__nav{
+        display: flex; 
+        flex-direction: column;
+        background-color: $bandsite-black;
+    }
+    &__nav-logo {
+        align-self: center;
+        color: $white; 
+        font-size: 24px;
+        line-height: 32px;
+        max-height: 20px;
+        max-width: 120px;
+        margin: 16px 0 16px 0;
+    }
+    &__nav-links {
+        display: flex;
+        justify-content: space-around;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 600;
+        padding-bottom: 8px; 
+        color: $mercury; 
+        &--active {
+            color: $white; 
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    background-image: url(../assets/images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 200px; 
+    width: 100vw;
+    padding: 0 16px 0 16px;
+    &__text {
+        align-self: center;
+        font-size: 24px; 
+        font-weight: 600; 
+        color: $white; 
+    }
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    margin: 0 16px 0 16px;
+    &__title {
+        font-size: 24px;
+        font-weight: 500;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        }
+    &__img {
+        max-height: 170px; 
+        width: 90vw; 
+        margin-bottom: 16px; 
+        }
+    &__quote {
+        padding-bottom: 8px;
+        font-size: 14px; 
+        line-height: 22px; 
+        font-weight: 500; 
+    }
+    &__sub-title {
+        font-size: 14px; 
+        padding-top: 16px; 
+        padding-bottom: 16px; 
+    }
+    &__copy { 
+        font-size: 13px; 
+        opacity: .8;
+        line-height: 18px;
+        padding-bottom: 16px;
+    }
+}
+
+.photo-gallery {
+    display: flex;
+    flex-direction: column;
+    background-color: $alabaster;
+    &__title {
+        font-size: 24px;
+        font-weight: 500;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        margin: 0 16px 0 16px;
+    }
+    &__img {
+        max-height: 170px; 
+        width: 90vw; 
+        margin: 0 16px 16px 16px;
+    }
 }

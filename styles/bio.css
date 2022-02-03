@@ -3,5 +3,100 @@
 }
 
 body {
+  font-family: Avenir Next, Arial, Helvetica, sans-serif;
+}
+
+.header__nav {
   display: flex;
+  flex-direction: column;
+  background-color: #323232;
+}
+.header__nav-logo {
+  align-self: center;
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 32px;
+  max-height: 20px;
+  max-width: 120px;
+  margin: 16px 0 16px 0;
+}
+.header__nav-links {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  padding-bottom: 8px;
+  color: #E1E1E1;
+}
+.header__nav-links--active {
+  color: #FFFFFF;
+}
+
+.hero {
+  display: flex;
+  background-image: url(../assets/images/hero-bio.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 100vw;
+  padding: 0 16px 0 16px;
+}
+.hero__text {
+  align-self: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  margin: 0 16px 0 16px;
+}
+.article__title {
+  font-size: 24px;
+  font-weight: 500;
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+.article__img {
+  max-height: 170px;
+  width: 90vw;
+  margin-bottom: 16px;
+}
+.article__quote {
+  padding-bottom: 8px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+}
+.article__sub-title {
+  font-size: 14px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.article__copy {
+  font-size: 13px;
+  opacity: 0.8;
+  line-height: 18px;
+  padding-bottom: 16px;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+  background-color: #FAFAFA;
+}
+.photo-gallery__title {
+  font-size: 24px;
+  font-weight: 500;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  margin: 0 16px 0 16px;
+}
+.photo-gallery__img {
+  max-height: 170px;
+  width: 90vw;
+  margin: 0 16px 16px 16px;
 }/*# sourceMappingURL=bio.css.map */
