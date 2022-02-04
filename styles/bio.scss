@@ -1,4 +1,4 @@
-@use 'partials/colors' as *; 
+@use 'partials/colors' as *;  
 
 * {
     box-sizing: border-box;
@@ -20,7 +20,6 @@ body {
         }
     }
     &__nav-logo {
-        align-self: center;
         color: $white; 
         font-size: 24px;
         line-height: 32px;
@@ -152,5 +151,87 @@ body {
         font-size: 13px;
         line-height: 18px;
         margin: 16px 0 16px 0;  
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        &__nav {
+            flex-direction: row;
+            align-items: center; 
+        }
+        &__nav-logo {
+            margin: 40px;
+            font-size: 32px;  
+        }
+        &__nav-links {
+            padding: 8px 0 0 72px;
+        }
+        &__nav-page {
+            padding-right: 56px;
+            font-size: 18px;
+        }
+    }
+    .hero {
+        height: 600px; 
+        padding: 0 36px 0 36px; 
+        &__text {
+            font-size: 64px;
+        }
+    }
+    .article {
+        margin: 0 36px 0 36px;
+        &__title {
+            font-size: 36px;
+            padding-top: 56px;
+            padding-bottom: 30px;
+        }
+        &__content {
+            margin: 0 56px 0 56px;
+            position: relative;
+        }
+        &__img {
+            max-height: 305px;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+        &__quote-statement {
+            font-size: 20px; 
+            line-height: 28px; 
+        }
+        &__sub-title {
+            font-size: 22px;
+            padding-top: 40px;
+            padding-bottom: 24px;
+            font-weight: 500;
+        }
+        &__copy-container {
+            display: flex;
+            justify-content: space-between; 
+        }
+        &__copy {
+            font-size: 14px;
+            line-height: 20px;
+            padding-bottom: 24px;
+            max-width: 277px;
+        }
+    }
+    .photo-gallery {
+        // flex-flow: row wrap;
+        padding: 0 36px 36px 36px; 
+        display: inline-block;
+        &__title {
+            margin: 0; 
+            font-size: 36px;
+            padding: 56px 0 32px 0; 
+        }
+        &__container {
+            margin: 0; 
+        }
+        &__img {
+            margin: 0 24px 24px 0; 
+            max-height: 130px;
+            width: 27vw; 
+        }
     }
 }
