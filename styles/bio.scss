@@ -195,19 +195,20 @@ body {
         }
 
         &__nav-logo {
-            margin: 2.5rem;
-            font-size: 2rem;  
+            margin: 1.5rem 0 1.5rem 2.5rem;
+            font-size: 2rem;
+            width: 120px;  
         }
 
         &__nav-links {
-            margin: 2.625rem 0 0 4.5rem;
+            margin: 1.5rem 0 0 4rem;
         }
 
         &__nav-page {
             margin-right: 4rem;
             font-size: 1.125rem;
             // padding-bottom: 2rem; 
-            width: 34%;
+            width: 32%;
         }
     }
 
@@ -327,6 +328,7 @@ body {
             position: absolute; 
             top: 3.5rem; 
             right: 2.25rem; 
+            width: 120px;
         }
     }
 }
@@ -334,7 +336,10 @@ body {
 @media screen and (min-width: 80rem) {
     .header {
         &__nav-logo {
-            margin: 2.5rem 2.5rem 2.5rem 7.5rem;
+            margin: 2.5rem -0.5rem 2.5rem 7.5rem;
+        }
+        &__nav-links {
+            margin: 2.5rem 0 0 4rem;
         }
     }
 

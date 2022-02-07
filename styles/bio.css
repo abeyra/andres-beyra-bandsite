@@ -174,16 +174,17 @@ body {
     flex-direction: row;
   }
   .header__nav-logo {
-    margin: 2.5rem;
+    margin: 1.5rem 0 1.5rem 2.5rem;
     font-size: 2rem;
+    width: 120px;
   }
   .header__nav-links {
-    margin: 2.625rem 0 0 4.5rem;
+    margin: 1.5rem 0 0 4rem;
   }
   .header__nav-page {
     margin-right: 4rem;
     font-size: 1.125rem;
-    width: 34%;
+    width: 32%;
   }
 
   .hero {
@@ -285,11 +286,15 @@ body {
     position: absolute;
     top: 3.5rem;
     right: 2.25rem;
+    width: 120px;
   }
 }
 @media screen and (min-width: 80rem) {
   .header__nav-logo {
-    margin: 2.5rem 2.5rem 2.5rem 7.5rem;
+    margin: 2.5rem -0.5rem 2.5rem 7.5rem;
+  }
+  .header__nav-links {
+    margin: 2.5rem 0 0 4rem;
   }
 
   .hero {
