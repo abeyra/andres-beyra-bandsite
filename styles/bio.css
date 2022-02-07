@@ -1,9 +1,21 @@
+@font-face {
+  font-family: avenir-regular;
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
+}
+@font-face {
+  font-family: avenir-demi;
+  src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf);
+}
+@font-face {
+  font-family: avenir-bold;
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
+}
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Avenir Next, Arial, Helvetica, sans-serif;
+  font-family: Avenir Next, Avenir Demi, Avenir Regular, Arial, Helvetica, sans-serif;
 }
 
 .header__nav {
@@ -25,15 +37,23 @@ body {
 }
 .header__nav-links {
   display: flex;
-  justify-content: space-around;
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
-  padding-bottom: 8px;
   color: #E1E1E1;
 }
 .header__nav-links--active {
+  border-bottom: 3px solid white;
+}
+.header__nav-links--active li {
   color: #FFFFFF;
+}
+.header__nav-page {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 8px;
+  text-decoration: none;
+  color: #E1E1E1;
 }
 
 .hero {
@@ -152,18 +172,18 @@ body {
 @media screen and (min-width: 768px) {
   .header__nav {
     flex-direction: row;
-    align-items: center;
   }
   .header__nav-logo {
     margin: 40px;
     font-size: 32px;
   }
   .header__nav-links {
-    padding: 8px 0 0 72px;
+    margin: 42px 0 0 72px;
   }
   .header__nav-page {
-    padding-right: 56px;
+    margin-right: 64px;
     font-size: 18px;
+    width: 34%;
   }
 
   .hero {
@@ -213,8 +233,7 @@ body {
   }
 
   .photo-gallery {
-    padding: 0 36px 36px 36px;
-    display: inline-block;
+    padding: 0 36px 12px 36px;
   }
   .photo-gallery__title {
     margin: 0;
@@ -222,11 +241,48 @@ body {
     padding: 56px 0 32px 0;
   }
   .photo-gallery__container {
-    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .photo-gallery__img {
-    margin: 0 24px 24px 0;
-    max-height: 130px;
-    width: 27vw;
+    margin: 0 0 24px 0;
+    max-height: 170px;
+    width: 31%;
+  }
+
+  .footer {
+    padding: 0 36px 0 36px;
+    position: relative;
+  }
+  .footer__contact {
+    display: flex;
+    align-items: center;
+    margin: 48px 0 32px 0;
+  }
+  .footer__title {
+    font-size: 36px;
+    font-weight: 600px;
+    padding: 0;
+    margin-right: 32px;
+  }
+  .footer__social-media {
+    padding: 0;
+  }
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__container {
+    font-size: 14px;
+  }
+  .footer__copyright-container {
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  .footer__copyright-title {
+    position: absolute;
+    top: 56px;
+    right: 36px;
   }
 }/*# sourceMappingURL=bio.css.map */

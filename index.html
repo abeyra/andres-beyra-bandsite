@@ -16,8 +16,12 @@
                 <h1 class="header__nav-logo">BANDSITE</h1>
             </a>
             <ul class="header__nav-links">
-                <li class="header__nav-page header__nav-links--active">Biography</li>
-                <li class="header__nav-page">Shows</li>
+                <a href="./index.html" class="header__nav-page header__nav-links--active">
+                    <li>Biography</li>
+                </a>
+                <a href="" class="header__nav-page">
+                    <li>Shows</li>
+                </a>
             </ul>
         </nav>
     </header>
@@ -65,7 +69,7 @@
     </article>
     <section class="photo-gallery">
         <h1 class="photo-gallery__title">Photo Gallery</h1>
-       
+        <div class="photo-gallery__container">
             <img class="photo-gallery__img" src="./assets/images/Photo-gallery-1.jpg" alt="">
             <img class="photo-gallery__img" src="./assets/images/Photo-gallery-2.jpg" alt="">
             <img class="photo-gallery__img" src="./assets/images/Photo-gallery-3.jpg" alt="">
@@ -75,47 +79,57 @@
             <img class="photo-gallery__img" src="./assets/images/Photo-gallery-7.jpg" alt="">
             <img class="photo-gallery__img" src="./assets/images/Photo-gallery-8.jpg" alt="">
             <img class="photo-gallery__img" src="./assets/images/Photo-gallery-9.jpg" alt="">
-     
+        </div>
     </section>
     <footer class="footer">
-        <h1 class="footer__title">Get in Touch</h1>
-        <div class="footer__social-media">
-            <img src="./assets/icons/SVG/Icon-instagram.svg" class="footer__social-media-icon" alt="instagram">
-            <img src="./assets/icons/SVG/Icon-facebook.svg" class="footer__social-media-icon" alt="facebook">
-            <img src="./assets/icons/SVG/Icon-twitter.svg" class="footer__social-media-icon" alt="twitter">
+        <div class="footer__contact">
+            <h1 class="footer__title">Get in Touch</h1>
+            <div class="footer__social-media">
+                <img src="./assets/icons/SVG/Icon-instagram.svg" class="footer__social-media-icon" alt="instagram">
+                <img src="./assets/icons/SVG/Icon-facebook.svg" class="footer__social-media-icon" alt="facebook">
+                <img src="./assets/icons/SVG/Icon-twitter.svg" class="footer__social-media-icon" alt="twitter">
+            </div>
         </div>
-        <div class="footer__container footer__container--bold">
-            <p class="footer__copy">Cam Adams</p>
-            <p class="footer__copy">The Bees Knees Management</p>
-        </div>
-        <div class="footer__container">
-            <p class="footer__copy">503 Broadway Penthouse,</p>
-            <p class="footer__copy">New York, NY 10012, USA</p>
-        </div>
-        <div class="footer__container">
-            <p class="footer__copy">info@thebeesknees.com</p>
-        </div>
-        <div class="footer__container footer__container--bold">
-            <p class="footer__copy">Pearl Gregg</p>
-            <p class="footer__copy">Limitless Artist Group</p>
-        </div>
-        <div class="footer__container">
-            <p class="footer__copy">Booking Agent for</p>
-            <p class="footer__copy">US / South America / Japan</p>
-        </div>
-        <div class="footer__container">
-            <p class="footer__copy">pearl.gregg@limitlessag.com</p>
-        </div>
-        <div class="footer__container footer__container--bold">
-            <p class="footer__copy">Carson Whyte</p>
-            <p class="footer__copy">ARCH Entertainment</p>
-        </div>
-        <div class="footer__container">
-            <p class="footer__copy">Booking Agent for</p>
-            <p class="footer__copy">UK / EU / AU</p>
-        </div>
-        <div class="footer__container">
-            <p class="footer__copy">cwhyte@archentertainment.com</p>
+        <div class="footer__wrapper">
+            <div class="footer__wrapper-column">
+                <div class="footer__container footer__container--bold">
+                    <p class="footer__copy">Cam Adams</p>
+                    <p class="footer__copy">The Bees Knees Management</p>
+                </div>
+                <div class="footer__container">
+                    <p class="footer__copy">503 Broadway Penthouse,</p>
+                    <p class="footer__copy">New York, NY 10012, USA</p>
+                </div>
+                <div class="footer__container">
+                    <p class="footer__copy">info@thebeesknees.com</p>
+                </div>
+            </div>
+            <div class="footer__wrapper-column">
+                <div class="footer__container footer__container--bold">
+                    <p class="footer__copy">Pearl Gregg</p>
+                    <p class="footer__copy">Limitless Artist Group</p>
+                </div>
+                <div class="footer__container">
+                    <p class="footer__copy">Booking Agent for</p>
+                    <p class="footer__copy">US / South America / Japan</p>
+                </div>
+                <div class="footer__container">
+                    <p class="footer__copy">pearl.gregg@limitlessag.com</p>
+                </div>
+            </div>
+            <div class="footer__wrapper-column">
+                <div class="footer__container footer__container--bold">
+                    <p class="footer__copy">Carson Whyte</p>
+                    <p class="footer__copy">ARCH Entertainment</p>
+                </div>
+                <div class="footer__container">
+                    <p class="footer__copy">Booking Agent for</p>
+                    <p class="footer__copy">UK / EU / AU</p>
+                </div>
+                <div class="footer__container">
+                    <p class="footer__copy">cwhyte@archentertainment.com</p>
+                </div>
+            </div>
         </div>
         <div class="footer__copyright-container">
             <h1 class="footer__copyright-title">BANDSITE</h1>
