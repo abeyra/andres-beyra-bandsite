@@ -296,6 +296,9 @@ body {
   .header__nav-links {
     margin: 2.5rem 0 0 4rem;
   }
+  .header__nav-page {
+    margin-right: 3rem;
+  }
 
   .hero {
     padding: 0 7.5rem 0 7.5rem;
