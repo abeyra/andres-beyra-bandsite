@@ -15,11 +15,14 @@ body {
         display: flex; 
         flex-direction: column;
         background-color: $bandsite-black;
+
         &-logo-link {
             align-self: center;
             text-decoration: none;
         }
+
     }
+
     &__nav-logo {
         color: $white; 
         font-size: 1.5rem;
@@ -28,6 +31,7 @@ body {
         max-width: 7.5rem;
         margin: 1rem 0 1rem 0;
     }
+
     &__nav-links {
         display: flex;
         // justify-content: space-around;
@@ -35,13 +39,16 @@ body {
         line-height: 1.375rem;
         font-weight: 600;
         color: $mercury; 
+        
         &--active {
             border-bottom: .1875rem solid white; 
             li {
                 color: $white; 
             }
         }
+
     }
+
     &__nav-page {
         width: 50%; 
         text-align: center;
@@ -61,6 +68,7 @@ body {
     height: 12.5rem; 
     width: 100vw;
     padding: 0 1rem 0 1rem;
+
     &__text {
         align-self: center;
         font-size: 1.5rem; 
@@ -73,28 +81,33 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 1rem 0 1rem;
+
     &__title {
         font-size: 1.5rem;
         font-weight: 500;
         padding-top: 1.5rem;
         padding-bottom: 1rem;
         }
+
     &__img {
         max-height: 10.625rem; 
         width: 90vw; 
         margin-bottom: 1rem; 
         }
+
     &__quote {
         padding-bottom: .5rem;
         font-size: .875rem; 
         line-height: 1.375rem; 
         font-weight: 500; 
     }
+
     &__sub-title {
         font-size: .875rem; 
         padding-top: 1rem; 
         padding-bottom: 1rem; 
     }
+
     &__copy { 
         font-size: .8125rem; 
         opacity: .8;
@@ -107,6 +120,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: $alabaster;
+
     &__title {
         font-size: 1.5rem;
         font-weight: 500;
@@ -114,6 +128,7 @@ body {
         padding-bottom: 1rem;
         margin: 0 1rem 0 1rem;
     }
+
     &__img {
         max-height: 10.625rem; 
         width: 90vw; 
@@ -127,36 +142,44 @@ body {
     padding: 0 1rem 0 1rem;
     background-color: $bandsite-black;
     color: $white; 
+
     &__title {
         font-size: 1.5rem; 
         font-weight: 500; 
         padding-top: 2rem; 
         padding-bottom: 1rem;
     }
+
     &__social-media {
             padding-bottom: 1rem;
+
             &-icon {
             padding-right: 1.5rem;
             height: 1.375rem;
         }
     }
+
     &__container {
         font-size: .8125rem; 
         line-height: 1.125rem;
         margin-bottom: 1rem;
     }
+
     &__container--bold {
         font-weight: 600; 
         margin-top: .5rem; 
     }
+
     &__copyright-container {
         margin-top: 3rem;
     }
+
     &__copyright-title {
         font-size: 1.5rem;
         max-height: 1.25rem;
         max-width: 7.5rem;
     }
+
     &__copyright-text {
         font-size: .8125rem;
         line-height: 1.125rem;
@@ -170,13 +193,16 @@ body {
             flex-direction: row;
             // align-items: center; 
         }
+
         &__nav-logo {
             margin: 2.5rem;
             font-size: 2rem;  
         }
+
         &__nav-links {
             margin: 2.625rem 0 0 4.5rem;
         }
+
         &__nav-page {
             margin-right: 4rem;
             font-size: 1.125rem;
@@ -184,43 +210,53 @@ body {
             width: 34%;
         }
     }
+
     .hero {
         height: 37.5rem; 
         padding: 0 2.25rem 0 2.25rem; 
+
         &__text {
             font-size: 4rem;
         }
     }
+
     .article {
         margin: 0 2.25rem 0 2.25rem;
+
         &__title {
             font-size: 2.25rem;
             padding-top: 3.5rem;
             padding-bottom: 1.875rem;
         }
+
         &__content {
             margin: 0 3.5rem 0 3.5rem;
             position: relative;
         }
+
         &__img {
             max-height: 19.0625rem;
             width: 100%;
             margin-bottom: 2rem;
         }
+
         &__quote-statement {
             font-size: 1.25rem; 
             line-height: 1.75rem; 
         }
+
         &__sub-title {
             font-size: 1.375rem;
             padding-top: 2.5rem;
             padding-bottom: 1.5rem;
             font-weight: 500;
         }
+
         &__copy-container {
             display: flex;
             justify-content: space-between; 
         }
+
         &__copy {
             font-size: .875rem;
             line-height: 1.25rem;
@@ -228,52 +264,64 @@ body {
             max-width: 17.3125rem;
         }
     }
+
     .photo-gallery {
         padding: 0 2.25rem .75rem 2.25rem; 
+
         &__title {
             margin: 0; 
             font-size: 2.25rem;
             padding: 3.5rem 0 2rem 0; 
         }
+
         &__container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between; 
         }
+
         &__img {
             margin: 0 0 1.5rem 0; 
             max-height: 10.625rem;
             width: 31%; 
         }
     }
+
     .footer {
         padding: 0 2.25rem 0 2.25rem;
         position: relative;
+
         &__contact {
             display: flex;
             align-items: center;
             margin: 3rem 0 2rem 0;
         }
+
         &__title {
             font-size: 2.25rem;
             font-weight: 37.5rem; 
             padding: 0; 
             margin-right: 2rem;
         }
+
         &__social-media {
             padding: 0; 
         }
+
         &__wrapper {
             display: flex;
             justify-content: space-between;
         }
+
         &__container {
             font-size: .875rem;
         }
+
         &__copyright-container {
             margin-top: 1rem; 
             margin-bottom: 1.5rem; 
         }
+
         &__copyright-title {
             position: absolute; 
             top: 3.5rem; 
@@ -288,38 +336,49 @@ body {
             margin: 2.5rem 2.5rem 2.5rem 7.5rem;
         }
     }
+
     .hero {
         padding: 0 7.5rem 0 7.5rem;
     }
+
     .article {
         margin: 0 7.5rem 0 7.5rem;
+
         &__content {
             margin: 0 5rem 0 5rem; 
         }
+
         &__img {
             max-height: 28.125rem;
         }
+
         &__quote-statement {
             max-width: 45.625rem; 
         }
+
         &__copy {
             max-width: 26.5625rem; 
         }
     }
+
     .photo-gallery {
         padding: 0 7.5rem .75rem 7.5rem;
     }
+
     .footer {
         padding: 0 7.5rem 0 7.5rem;
         &__title {
             margin-right: 4rem; 
         }
+
         &__wrapper {
             justify-content: normal;
         }
+
         &__wrapper-column {
             padding-right: 5rem; 
         }
+        
         &__copyright-title {
             right: 7.5rem; 
         }
