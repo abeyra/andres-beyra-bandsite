@@ -275,6 +275,7 @@ body {
   }
   .footer__container {
     font-size: 0.875rem;
+    line-height: 1.25;
   }
   .footer__copyright-container {
     margin-top: 1rem;
