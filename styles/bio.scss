@@ -136,12 +136,109 @@ body {
     }
 }
 
+.comments {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem 0 1rem;
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 1rem 0;
+        // margin: 0 1rem 0 1rem;
+    }
+    &__img {
+        background-image: url(../assets/images/Mohan-muruge.jpg);
+        background-position: center;
+        background-size: contain;
+        background-color: $mercury;
+        max-width: 36px;
+        max-height: 36px;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        float: left;
+        margin: 20px 16px 0 0;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        &-label {
+            color: $silver;
+            font-size: 10px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+        &-field {
+            min-height: 36px;
+            width: 100%;
+            font-size: 13px; 
+            border-radius: 4px;
+            border: 1px solid $mercury; 
+            padding: 10px 0 10px 10px; 
+            margin-bottom: 16px;
+            background-color: $alabaster;
+            &--comment {
+                padding-bottom: 64px;
+            }
+        }
+        &-button {
+            font-size: 16px;
+            line-height: 20px;
+            color: $white;
+            background: $bandsite-black;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+    }
+    &__hr {
+        width: 100%;
+        opacity: .5;
+    }
+    &__post {
+        position: relative;
+        &-circle {
+            border-radius: 50%;
+            width: 36px; 
+            height: 36px; 
+            float: left;
+            margin-top: 4px;
+            margin-right: 16px;
+            background-color: $mercury; 
+        }
+        &-content {
+            display: flex;
+            flex-direction: column;
+        }
+        &-author {
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 8px;
+        }   
+        &-date {
+            position: absolute;
+            right: 0; 
+            top: 8px;
+            font-size: 13px;
+            color: $silver;
+        }
+        &-message {
+            font-size: 13px;
+            line-height: 18px;
+            margin-top: 8px;
+            opacity: .9;
+        }
+    }
+    
+}
+
 .footer {
     display: flex; 
     flex-direction: column;
     padding: 0 1rem 0 1rem;
     background-color: $bandsite-black;
     color: $white; 
+    margin-top: 8px; 
 
     &__title {
         font-size: 1.5rem; 
