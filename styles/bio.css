@@ -10,6 +10,14 @@
   font-family: avenir-bold;
   src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
 }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Avenir Next, Avenir Demi, Avenir Regular, Arial, Helvetica, sans-serif;
+}
+
 .header__nav {
   display: flex;
   flex-direction: column;
@@ -174,14 +182,6 @@
     right: 7.5rem;
   }
 }
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Avenir Next, Avenir Demi, Avenir Regular, Arial, Helvetica, sans-serif;
-}
-
 .hero {
   display: flex;
   background-image: url(../assets/images/hero-bio.jpg);

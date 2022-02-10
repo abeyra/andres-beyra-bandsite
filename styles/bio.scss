@@ -2,14 +2,6 @@
 @use 'partials/fonts' as *; 
 @use 'partials/global' as *; 
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Avenir Next, Avenir Demi, Avenir Regular, Arial, Helvetica, sans-serif;
-}
-
 .hero {
     display: flex;
     background-image: url(../assets/images/hero-bio.jpg);
