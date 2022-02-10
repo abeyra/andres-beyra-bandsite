@@ -1,0 +1,204 @@
+@use './colors' as *; 
+
+.header {
+
+    &__nav{
+        display: flex; 
+        flex-direction: column;
+        background-color: $bandsite-black;
+
+        &-logo-link {
+            align-self: center;
+            text-decoration: none;
+        }
+
+    }
+
+    &__nav-logo {
+        color: $white; 
+        font-size: 1.5rem;
+        line-height: 2rem;
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+        margin: 1rem 0 1rem 0;
+    }
+
+    &__nav-links {
+        display: flex;
+        // justify-content: space-around;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        font-weight: 600;
+        color: $mercury; 
+        
+        &--active {
+            border-bottom: .1875rem solid white; 
+            li {
+                color: $white; 
+            }
+        }
+
+    }
+
+    &__nav-page {
+        width: 50%; 
+        text-align: center;
+        padding-bottom: .5rem; 
+        text-decoration: none;
+        color: $mercury;
+    }
+}
+
+.footer {
+    display: flex; 
+    flex-direction: column;
+    padding: 0 1rem 0 1rem;
+    background-color: $bandsite-black;
+    color: $white; 
+    margin-top: 8px; 
+
+    &__title {
+        font-size: 1.5rem; 
+        font-weight: 500; 
+        padding-top: 2rem; 
+        padding-bottom: 1rem;
+    }
+
+    &__social-media {
+            padding-bottom: 1rem;
+
+            &-icon {
+            padding-right: 1.5rem;
+            height: 1.375rem;
+        }
+    }
+
+    &__container {
+        font-size: .8125rem; 
+        line-height: 1.125rem;
+        margin-bottom: 1rem;
+    }
+
+    &__container--bold {
+        font-weight: 600; 
+        margin-top: .5rem; 
+    }
+
+    &__copyright-container {
+        margin-top: 3rem;
+    }
+
+    &__copyright-title {
+        font-size: 1.5rem;
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+    }
+
+    &__copyright-text {
+        font-size: .8125rem;
+        line-height: 1.125rem;
+        margin: 1rem 0 1rem 0;  
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .header {
+        &__nav {
+            flex-direction: row;
+            // align-items: center; 
+        }
+
+        &__nav-logo {
+            margin: 1.5rem 0 1.5rem 2.5rem;
+            font-size: 2rem;
+            width: 120px;  
+        }
+
+        &__nav-links {
+            margin: 1.5rem 0 0 4rem;
+        }
+
+        &__nav-page {
+            margin-right: 3.5rem;
+            width: 32%;
+        }
+    }
+
+    .footer {
+        padding: 0 2.25rem 0 2.25rem;
+        position: relative;
+
+        &__contact {
+            display: flex;
+            align-items: center;
+            margin: 3rem 0 2.25rem 0;
+        }
+
+        &__title {
+            font-size: 2.25rem;
+            font-weight: 37.5rem; 
+            padding: 0; 
+            margin-right: 2.5rem;
+        }
+
+        &__social-media {
+            padding: 0; 
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__container {
+            font-size: .875rem;
+            line-height: 1.25;
+        }
+
+        &__copyright-container {
+            margin-top: 1rem; 
+            margin-bottom: 1.5rem; 
+        }
+
+        &__copyright-title {
+            position: absolute; 
+            top: 3.5rem; 
+            right: 2.25rem; 
+            width: 120px;
+        }
+    }
+}
+
+@media screen and (min-width: 80rem) {
+    .header {
+        &__nav-logo {
+            margin: 2.5rem -0.5rem 2.5rem 7.5rem;
+        }
+        &__nav-links {
+            margin: 2.5rem 0 0 4rem;
+        }
+        &__nav-page {
+            margin-right: 2.25rem;
+            width: 35%;
+        }
+    }
+
+     .footer {
+        padding: 0 7.5rem 0 7.5rem;
+        &__title {
+            margin-right: 4rem; 
+        }
+
+        &__wrapper {
+            justify-content: normal;
+        }
+
+        &__wrapper-column {
+            padding-right: 5rem; 
+        }
+        
+        &__copyright-title {
+            right: 7.5rem; 
+        }
+    }
+}
