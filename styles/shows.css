@@ -33,13 +33,13 @@ body {
   line-height: 2rem;
   max-height: 1.25rem;
   max-width: 7.5rem;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 0.5rem 0;
 }
 .header__nav-links {
   display: flex;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #E1E1E1;
 }
 .header__nav-links--active {
@@ -47,6 +47,7 @@ body {
 }
 .header__nav-links--active li {
   color: #FFFFFF;
+  font-weight: 500;
 }
 .header__nav-page {
   width: 50%;
@@ -181,4 +182,70 @@ body {
   .footer__copyright-title {
     right: 7.5rem;
   }
+}
+.hero {
+  background-image: url(../assets/images/hero-shows.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(50, 50, 50, 0.5);
+  background-blend-mode: overlay;
+  height: 17rem;
+  width: 100vw;
+  padding: 0 1rem 0 1rem;
+}
+.hero__album {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 2rem 0 1rem 0;
+}
+.hero__band-name {
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 32px;
+  max-width: 240px;
+  color: #FFFFFF;
+}
+.hero__soundcloud-song {
+  max-height: 100px;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+
+.shows__title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 32px 1rem 16px 1rem;
+}
+.shows__concert {
+  padding: 0 1rem 0 1rem;
+}
+.shows__concert-label {
+  font-size: 10px;
+  color: #AFAFAF;
+}
+.shows__concert-details {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 4px 0 8px 0;
+}
+.shows__concert-button {
+  width: 100%;
+  color: #FFFFFF;
+  background: #323232;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  border-radius: 4px;
+  border: none;
+  margin: 8px 0;
+  padding: 10px;
+  cursor: pointer;
+}
+.shows__hr {
+  opacity: 0.5;
+  stroke-width: 1px;
+  margin-bottom: 16px;
 }/*# sourceMappingURL=shows.css.map */

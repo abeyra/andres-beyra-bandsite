@@ -28,7 +28,7 @@ body {
         line-height: 2rem;
         max-height: 1.25rem;
         max-width: 7.5rem;
-        margin: 1rem 0 1rem 0;
+        margin: 1rem 0 .5rem 0;
     }
 
     &__nav-links {
@@ -36,13 +36,14 @@ body {
         // justify-content: space-around;
         font-size: .875rem;
         line-height: 1.375rem;
-        font-weight: 600;
+        font-weight: 400;
         color: $mercury; 
         
         &--active {
             border-bottom: .1875rem solid white; 
             li {
                 color: $white; 
+                font-weight: 500; 
             }
         }
 

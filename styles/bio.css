@@ -33,13 +33,13 @@ body {
   line-height: 2rem;
   max-height: 1.25rem;
   max-width: 7.5rem;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 0.5rem 0;
 }
 .header__nav-links {
   display: flex;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #E1E1E1;
 }
 .header__nav-links--active {
@@ -47,6 +47,7 @@ body {
 }
 .header__nav-links--active li {
   color: #FFFFFF;
+  font-weight: 500;
 }
 .header__nav-page {
   width: 50%;

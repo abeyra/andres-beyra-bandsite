@@ -1,3 +1,76 @@
 @use 'partials/colors' as *;  
 @use 'partials/fonts' as *; 
 @use 'partials/global' as *; 
+
+.hero {
+    background-image: url(../assets/images/hero-shows.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(50, 50, 50, .5);
+    background-blend-mode: overlay;
+    height: 17rem; 
+    width: 100vw;
+    padding: 0 1rem 0 1rem;
+
+    &__album {
+        color: $white; 
+        font-size: 14px;
+        font-weight: 500;
+        padding: 2rem 0 1rem 0; 
+    }
+    &__band-name {
+        align-self: center;
+        font-size: 1.5rem; 
+        font-weight: 600; 
+        line-height: 32px;
+        max-width: 240px;
+        color: $white; 
+    }
+    &__soundcloud-song {
+        max-height: 100px; 
+        border-radius: 4px;
+        margin-top: 16px;
+    }
+}
+
+.shows {
+    // padding: 0 1rem 0 1rem;
+    &__title {
+        font-size: 24px; 
+        line-height: 32px;
+        font-weight: 500; 
+        padding: 32px 1rem 16px 1rem;
+    }
+    &__concert {
+        padding: 0 1rem 0 1rem;
+        &-label {
+            font-size: 10px; 
+            color: $silver;
+            // padding-bottom: 4px;  
+        }
+        &-details {
+            font-size: 13px;
+            line-height: 18px;
+            margin: 4px 0 8px 0; 
+        }
+        &-button {
+            width: 100%; 
+            color: $white;
+            background: $bandsite-black;
+            font-size: 14px; 
+            font-weight: 500;
+            line-height: 20px;
+            border-radius: 4px;
+            border: none;
+            margin: 8px 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
+    &__hr {
+        opacity: .5; 
+        stroke-width: 1px;
+        margin-bottom: 16px;
+    }
+    
+}
