@@ -164,7 +164,7 @@ body {
   }
   .header__nav-page {
     margin-right: 2.25rem;
-    width: 35%;
+    width: 100%;
   }
 
   .footer {
@@ -231,11 +231,16 @@ body {
   line-height: 18px;
   margin: 4px 0 8px 0;
 }
+.shows__concert-details--bold {
+  font-weight: 500;
+}
 .shows__concert-button {
   width: 100%;
+  height: 40px;
   color: #FFFFFF;
   background: #323232;
   font-size: 14px;
+  font-family: avenir-demi;
   font-weight: 500;
   line-height: 20px;
   border-radius: 4px;
@@ -248,4 +253,111 @@ body {
   opacity: 0.5;
   stroke-width: 1px;
   margin-bottom: 16px;
+}
+
+@media screen and (min-width: 48rem) {
+  .hero {
+    padding: 0 2.25rem 0 2.25rem;
+    height: 465px;
+  }
+  .hero__album {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 3.5rem 0 1rem 0;
+  }
+  .hero__band-name {
+    font-size: 56px;
+    line-height: 68px;
+    max-width: 550px;
+  }
+  .hero__soundcloud-song {
+    margin-top: 40px;
+    max-height: 135px;
+    width: 54%;
+  }
+
+  .shows__title {
+    padding: 48px 2.25rem 72px 2.25rem;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .shows__wrapper {
+    padding-bottom: 8px;
+  }
+  .shows__concert {
+    padding: 0 2.25rem 0 2.25rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .shows__concert-label {
+    display: none;
+  }
+  .shows__concert-label--section {
+    display: block;
+    position: absolute;
+    top: -32px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .shows__concert-details {
+    font-size: 14px;
+  }
+  .shows__concert-button {
+    min-width: 150px;
+    width: 20%;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-family: avenir next;
+  }
+  .shows__concert-button:hover {
+    background: #000000;
+  }
+  .shows__hr {
+    width: 95%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .header__nav-page {
+    width: 60px;
+  }
+
+  .hero {
+    padding: 0 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 650px;
+  }
+  .hero__album {
+    padding: 0 0 1rem 0;
+  }
+  .hero__band-name {
+    max-width: 470px;
+  }
+  .hero__soundcloud-song {
+    max-height: 130px;
+    padding-left: 220px;
+  }
+
+  .shows {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .shows__title {
+    display: inline;
+    padding: 48px 7.5rem 0 7.5rem;
+    align-self: baseline;
+  }
+  .shows__wrapper {
+    width: 65%;
+    margin: 0 88px;
+    padding-top: 10px;
+  }
+  .shows__hr {
+    width: 97%;
+  }
 }/*# sourceMappingURL=shows.css.map */

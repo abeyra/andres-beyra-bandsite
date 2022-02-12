@@ -16,18 +16,20 @@
                 <img class="header__nav-logo" src="../assets/logos/Logo-bandsite.svg" alt="bandsite-logo">
             </a>
             <ul class="header__nav-links">
-                <a href="./index.html" class="header__nav-page">
+                <a href="../index.html" class="header__nav-page">
                     <li>Biography</li>
                 </a>
-                <a href="" class="header__nav-page header__nav-links--active">
+                <a href="./shows.html" class="header__nav-page header__nav-links--active">
                     <li>Shows</li>
                 </a>
             </ul>
         </nav>
     </header>
     <section class="hero">
-        <h3 class="hero__album">Beautiful Beast Album</h3>
-        <h1 class="hero__band-name">Queen of Yellow x For the Stings</h1>
+        <div class="hero__text-container">
+            <h3 class="hero__album">Beautiful Beasts Album</h3>
+            <h1 class="hero__band-name">Queen of Yellow x For The Stings</h1>
+        </div>
         <iframe class="hero__soundcloud-song" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/260272547&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
             <div
@@ -38,68 +40,105 @@
                     style="color: #cccccc; text-decoration: none;"></a></div>
     </section>
     <section class="shows">
-        <div class="shows__wrapper">
-            <h1 class="shows__title">Shows</h1>
-            <div class="shows__concert">
-                <label class="shows__concert-label" for="">DATE</label>
-                <p class="shows__concert-details shows__concert-details--bold">Mon Sept 06 2021</p>
-                <label class="shows__concert-label" for="">VENUE</label>
-                <p class="shows__concert-details">Ronald Lane</p>
-                <label class="shows__concert-label" for="">LOCATION</label>
-                <p class="shows__concert-details">San Francisco, CA</p>
-                <button class="shows__concert-button">BUY TICKETS</button>
-            </div>
-            <hr class="shows__hr">
-            <div class="shows__concert">
-                <label class="shows__concert-label" for="">DATE</label>
-                <p class="shows__concert-details shows__concert-details--bold">Tue Sept 21 2021</p>
-                <label class="shows__concert-label" for="">VENUE</label>
-                <p class="shows__concert-details">Pier 3 East</p>
-                <label class="shows__concert-label" for="">LOCATION</label>
-                <p class="shows__concert-details">San Francisco, CA</p>
-                <button class="shows__concert-button">BUY TICKETS</button>
-            </div>
-            <hr class="shows__hr">
-            <div class="shows__concert">
-                <label class="shows__concert-label" for="">DATE</label>
-                <p class="shows__concert-details shows__concert-details--bold">Fri Oct 15 2021</p>
-                <label class="shows__concert-label" for="">VENUE</label>
-                <p class="shows__concert-details">View Lounge</p>
-                <label class="shows__concert-label" for="">LOCATION</label>
-                <p class="shows__concert-details">San Francisco, CA</p>
-                <button class="shows__concert-button">BUY TICKETS</button>
-            </div>
-            <hr class="shows__hr">
-            <div class="shows__concert">
-                <label class="shows__concert-label" for="">DATE</label>
-                <p class="shows__concert-details shows__concert-details--bold">Sat Nov 06 2021</p>
-                <label class="shows__concert-label" for="">VENUE</label>
-                <p class="shows__concert-details">Hyatt Agency</p>
-                <label class="shows__concert-label" for="">LOCATION</label>
-                <p class="shows__concert-details">San Francisco, CA</p>
-                <button class="shows__concert-button">BUY TICKETS</button>
-            </div>
-            <hr class="shows__hr">
-            <div class="shows__concert">
-                <label class="shows__concert-label" for="">DATE</label>
-                <p class="shows__concert-details shows__concert-details--bold">Fri Nov 26 2021</p>
-                <label class="shows__concert-label" for="">VENUE</label>
-                <p class="shows__concert-details">Moscow Center</p>
-                <label class="shows__concert-label" for="">LOCATION</label>
-                <p class="shows__concert-details">San Francisco, CA</p>
-                <button class="shows__concert-button">BUY TICKETS</button>
-            </div>
-            <hr class="shows__hr">
-            <div class="shows__concert">
-                <label class="shows__concert-label" for="">DATE</label>
-                <p class="shows__concert-details shows__concert-details--bold">Wed Dec 15 2021</p>
-                <label class="shows__concert-label" for="">VENUE</label>
-                <p class="shows__concert-details">Press Club</p>
-                <label class="shows__concert-label" for="">LOCATION</label>
-                <p class="shows__concert-details">San Francisco, CA</p>
-                <button class="shows__concert-button">BUY TICKETS</button>
-            </div>
-            <hr class="shows__hr">
+        
+        <h1 class="shows__title">Shows</h1>
+            <div class="shows__wrapper">
+                <ul class="shows__concert">
+                    <li>
+                        <label class="shows__concert-label shows__concert-label--section" for="">DATE</label>
+                        <p class="shows__concert-details shows__concert-details--bold">Mon Sept 06 2021</p>
+                    </li>
+                    <li>
+                        <label class="shows__concert-label shows__concert-label--section" for="">VENUE</label>
+                        <p class="shows__concert-details">Ronald Lane</p>
+                    </li>
+                    <li>
+                        <label class="shows__concert-label shows__concert-label--section" for="">LOCATION</label>
+                        <p class="shows__concert-details">San Francisco, CA</p>
+                    </li>
+                    <button class="shows__concert-button">BUY TICKETS</button>
+                </ul>
+                <hr class="shows__hr">
+                <ul class="shows__concert">
+                    <li>
+                        <label class="shows__concert-label" for="">DATE</label>
+                        <p class="shows__concert-details shows__concert-details--bold">Tue Sept 21 2021</p>
+                    </li>
+                    <li>
+                        <label class="shows__concert-label" for="">VENUE</label>
+                        <p class="shows__concert-details">Pier 3 East</p>
+                    </li>
+                    <li>
+                        <label class="shows__concert-label" for="">LOCATION</label>
+                        <p class="shows__concert-details">San Francisco, CA</p>
+                    </li>
+                    <button class="shows__concert-button">BUY TICKETS</button>
+                </ul>
+                <hr class="shows__hr">
+                <ul class="shows__concert">
+                    <li>
+                        <label class="shows__concert-label" for="">DATE</label>
+                        <p class="shows__concert-details shows__concert-details--bold">Fri Oct 15 2021</p>
+                    </li>
+                    <li>
+                        <label class="shows__concert-label" for="">VENUE</label>
+                        <p class="shows__concert-details">View Lounge</p>
+                    </li>
+                    <li>
+                        <label class="shows__concert-label" for="">LOCATION</label>
+                        <p class="shows__concert-details">San Francisco, CA</p>
+                    </li>
+                    <button class="shows__concert-button">BUY TICKETS</button>
+                </ul>
+                <hr class="shows__hr">
+                <ul class="shows__concert">
+                    <li>
+                        <label class="shows__concert-label" for="">DATE</label>
+                        <p class="shows__concert-details shows__concert-details--bold">Sat Nov 06 2021</p>
+                    </li>
+                    <li>
+                        <label class="shows__concert-label" for="">VENUE</label>
+                        <p class="shows__concert-details">Hyatt Agency</p>
+                    </li>
+                    <li>
+                        <label class="shows__concert-label" for="">LOCATION</label>
+                        <p class="shows__concert-details">San Francisco, CA</p>
+                    </li>
+                    <button class="shows__concert-button">BUY TICKETS</button>
+                </ul>
+                <hr class="shows__hr">
+                <ul class="shows__concert">
+                    <li>
+                        <label class="shows__concert-label" for="">DATE</label>
+                        <p class="shows__concert-details shows__concert-details--bold">Fri Nov 26 2021</p>
+                    </li>
+                    <li>
+                        <label class="shows__concert-label" for="">VENUE</label>
+                        <p class="shows__concert-details">Moscow Center</p>
+                    </li>
+                    <li>
+                        <label class="shows__concert-label" for="">LOCATION</label>
+                        <p class="shows__concert-details">San Francisco, CA</p>
+                    </li>
+                    <button class="shows__concert-button">BUY TICKETS</button>
+                </ul>
+                <hr class="shows__hr">
+                <ul class="shows__concert">
+                    <li>
+                        <label class="shows__concert-label" for="">DATE</label>
+                        <p class="shows__concert-details shows__concert-details--bold">Wed Dec 15 2021</p>
+                    </li>
+                    <li>
+                        <label class="shows__concert-label" for="">VENUE</label>
+                        <p class="shows__concert-details">Press Club</p>
+                    </li>
+                    <li>
+                        <label class="shows__concert-label" for="">LOCATION</label>
+                        <p class="shows__concert-details">San Francisco, CA</p>
+                    </li>
+                    <button class="shows__concert-button">BUY TICKETS</button>
+                </ul>
+                <hr class="shows__hr">
         </div>
     </section>
     <footer class="footer">
