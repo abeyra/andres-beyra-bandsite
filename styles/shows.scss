@@ -43,6 +43,12 @@
     }
     &__concert {
         padding: 0 1rem 0 1rem;
+        &:hover {
+            background-color: $alabaster;
+        }
+        &:focus {
+            background-color: $mercury;
+        }
         &-label {
             font-size: 10px; 
             color: $silver;

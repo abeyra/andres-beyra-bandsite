@@ -222,6 +222,12 @@ body {
 .shows__concert {
   padding: 0 1rem 0 1rem;
 }
+.shows__concert:hover {
+  background-color: #FAFAFA;
+}
+.shows__concert:focus {
+  background-color: #E1E1E1;
+}
 .shows__concert-label {
   font-size: 10px;
   color: #AFAFAF;
