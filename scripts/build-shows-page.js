@@ -70,40 +70,62 @@ preloadedComments(commentsArray);
 
     const form = document.querySelector(".comments__form"); 
 
-    form.addEventListener("submit", function(event){
+    // form.addEventListener("submit", function(event){
+    //     event.preventDefault();
+
+    //     let nameValue = event.target.name.value; 
+    //     let commentValue = event.target.comment.value; 
+
+    //     if (nameValue && commentValue){
+    //         commentsContainer.innerText = ''; 
+    //         commentsArray.unshift({
+    //             name: nameValue,
+    //             timestamp: '',
+    //             commentText: commentValue
+    //         });
+    //         for(i = 0; i < commentsArray.length; i++){
+    //             preloadedComments(commentsArray);
+    //         }
+    //     }
+
+    //     document.querySelector(".comments__form-field").value = ''; 
+    //     document.querySelector(".comments__form-field--comment").value = ''; 
+    // });
+
+
+
+function displayComment(object){
+
+    object = {
+        name: '',
+        timestamp: '02/11/2022',
+        commentText: ''
+    };
+
+       form.addEventListener("submit", function(event){
         event.preventDefault();
 
         let nameValue = event.target.name.value; 
         let commentValue = event.target.comment.value; 
 
+        object.name = nameValue;
+        object.commentText = commentValue;
+
         if (nameValue && commentValue){
             commentsContainer.innerText = ''; 
-            commentsArray.unshift({
-                name: nameValue,
-                timestamp: '',
-                commentText: commentValue
-            });
+            commentsArray.unshift(object);
+
             for(i = 0; i < commentsArray.length; i++){
                 preloadedComments(commentsArray);
             }
         }
 
+
+        // code to clear the input fields after submission
         document.querySelector(".comments__form-field").value = ''; 
         document.querySelector(".comments__form-field--comment").value = ''; 
     });
 
+}
 
-
-// function displayComment(comment){
-
-//     let post = document.createElement("ul"); 
-//     post.classList.add("comments__post"); 
-
-//     let circleContainer = document.createElement("li"); 
-
-//     let circle = document.createElement("div"); 
-//     circle.classList.add("comments__post-circle"); 
-
-//     circleContainer.appendChild(circle); 
-
-// }
+displayComment(comment); 
