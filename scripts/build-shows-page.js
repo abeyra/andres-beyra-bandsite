@@ -62,7 +62,7 @@ function shows(arr){
         let dateContainer = document.createElement("div"); 
 
         let dateLabelJs = document.createElement("label"); 
-        dateLabelJs.classList.add("shows__concert-label", "shows__concert-label--section"); 
+        dateLabelJs.classList.add("shows__concert-label"); 
         dateLabelJs.innerText = arr[i].dateLabel;
 
         let dateText = document.createElement("p");
@@ -72,7 +72,7 @@ function shows(arr){
         let venueContainer = document.createElement("div"); 
 
         let venueLabelJs = document.createElement("label");
-        venueLabelJs.classList.add("shows__concert-label", "shows__concert-label--section"); 
+        venueLabelJs.classList.add("shows__concert-label"); 
         venueLabelJs.innerText = arr[i].venueLabel;
 
         let venueText = document.createElement("p");
@@ -82,7 +82,7 @@ function shows(arr){
         let locationContainer = document.createElement("div");
 
         let locationLabelJs = document.createElement("label"); 
-        locationLabelJs.classList.add("shows__concert-label", "shows__concert-label--section");
+        locationLabelJs.classList.add("shows__concert-label");
         locationLabelJs.innerText = arr[i].locationLabel;
 
         let locationText = document.createElement("p"); 
@@ -92,9 +92,6 @@ function shows(arr){
         let concertButton = document.createElement("button");
         concertButton.classList.add("shows__concert-button"); 
         concertButton.innerText = "BUY TICKETS"; 
-
-        let hr = document.createElement("hr"); 
-        hr.classList.add("shows__hr"); 
 
         showsWrapper.appendChild(showsConcert);
 
@@ -111,10 +108,9 @@ function shows(arr){
         locationContainer.appendChild(locationText);
 
         showsConcert.appendChild(concertButton);
-        showsConcert.appendChild(hr);
 
     }
 
 }
 
-// shows(showsArray); 
+shows(showsArray); 
