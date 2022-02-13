@@ -1,6 +1,4 @@
 
-const showsWrapper = document.querySelector(".shows__wrapper"); 
-
 let showsArray = [
     {
         dateLabel: "DATE",
@@ -51,6 +49,8 @@ let showsArray = [
         location: "San Fransisco, CA"
     },
 ]; 
+
+const showsWrapper = document.querySelector(".shows__wrapper"); 
 
 function shows(arr){
 
@@ -114,3 +114,13 @@ function shows(arr){
 }
 
 shows(showsArray); 
+
+// code to add event listener to all concert items 
+
+document.querySelectorAll(".shows__concert").forEach(item => {
+    item.addEventListener("click", event => {
+        item.classList.add("shows__concert--active"); 
+    });  
+}); 
+
+

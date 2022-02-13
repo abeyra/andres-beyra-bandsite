@@ -235,7 +235,7 @@ body {
 .shows__concert:hover {
   background-color: #FAFAFA;
 }
-.shows__concert:focus {
+.shows__concert--active {
   background-color: #E1E1E1;
 }
 .shows__concert-label {
