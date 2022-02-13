@@ -1,131 +1,120 @@
 
-const commentsArray = [
+const showsWrapper = document.querySelector(".shows__wrapper"); 
+
+let showsArray = [
     {
-        name: "Connor Walton",
-        timestamp: "02/17/2021",
-        commentText: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
+        dateLabel: "DATE",
+        date: "Mon Sept 06 2021",
+        venueLabel: "VENUE",
+        venue: "Ronald Lane",
+        locationLabel: "LOCATION",
+        location: "San Fransisco, CA"
     },
     {
-        name: "Emilie Beach",
-        timestamp: "01/09/2021",
-        commentText: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
+        dateLabel: "DATE",
+        date: "Tue Sept 21 2021",
+        venueLabel: "VENUE",
+        venue: "Pier 3 East",
+        locationLabel: "LOCATION",
+        location: "San Fransisco, CA"
     },
-    {
-        name: "Miles Acosta",
-        timestamp: "12/20/2020",
-        commentText: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
+     {
+        dateLabel: "DATE",
+        date: "Fri Oct 15 2021",
+        venueLabel: "VENUE",
+        venue: "View Lounge",
+        locationLabel: "LOCATION",
+        location: "San Fransisco, CA"
     },
-];
+     {
+        dateLabel: "DATE",  
+        date: "Sat Nov 06 2021",
+        venueLabel: "VENUE",
+        venue: "Hyatt Agency",
+        locationLabel: "LOCATION",
+        location: "San Fransisco, CA"
+    },
+     {
+        dateLabel: "DATE",
+        date: "Fri Nov 26 2021",
+        venueLabel: "VENUE",
+        venue: "Moscow Center",
+        locationLabel: "LOCATION",
+        location: "San Fransisco, CA"
+    },
+     {
+        dateLabel: "DATE",
+        date: "Wed Dec 15 2021",
+        venueLabel: "VENUE",
+        venue: "Press Club",
+        locationLabel: "LOCATION",
+        location: "San Fransisco, CA"
+    },
+]; 
 
-const commentsContainer = document.querySelector(".comments__container"); 
+function shows(arr){
 
-function preloadedComments(array){
-    
-    for (i = 0; i < array.length; i++){
-      
-        let post = document.createElement("ul"); 
-        post.classList.add("comments__post"); 
+    for(i = 0; i < arr.length; i++){
 
-        let circleContainer = document.createElement("li"); 
+        let showsConcert = document.createElement("li");
+        showsConcert.classList.add("shows__concert");
 
-        let circle = document.createElement("div"); 
-        circle.classList.add("comments__post-circle"); 
+        let dateContainer = document.createElement("div"); 
 
-        let textContainer = document.createElement("li"); 
-        let postContent = document.createElement("div"); 
+        let dateLabelJs = document.createElement("label"); 
+        dateLabelJs.classList.add("shows__concert-label", "shows__concert-label--section"); 
+        dateLabelJs.innerText = arr[i].dateLabel;
 
-        postContent.classList.add("comments__post-content"); 
+        let dateText = document.createElement("p");
+        dateText.classList.add("shows__concert-details", "shows__concert-details--bold");
+        dateText.innerText = arr[i].date;
 
-        let author = document.createElement("h3"); 
-        author.classList.add("comments__post-author"); 
-        author.innerText = array[i].name; 
+        let venueContainer = document.createElement("div"); 
 
-        let date = document.createElement("p");
-        date.classList.add("comments__post-date");
-        date.innerText = array[i].timestamp;
+        let venueLabelJs = document.createElement("label");
+        venueLabelJs.classList.add("shows__concert-label", "shows__concert-label--section"); 
+        venueLabelJs.innerText = arr[i].venueLabel;
 
-        let message = document.createElement("p"); 
-        message.classList.add("comments__post-message"); 
-        message.innerText = array[i].commentText; 
+        let venueText = document.createElement("p");
+        venueText.classList.add("shows__concert-details"); 
+        venueText.innerText = arr[i].venue;
 
-        commentsContainer.appendChild(post); 
+        let locationContainer = document.createElement("div");
 
-        post.appendChild(circleContainer); 
-        circleContainer.appendChild(circle); 
+        let locationLabelJs = document.createElement("label"); 
+        locationLabelJs.classList.add("shows__concert-label", "shows__concert-label--section");
+        locationLabelJs.innerText = arr[i].locationLabel;
 
-        post.appendChild(textContainer); 
-        textContainer.appendChild(postContent); 
+        let locationText = document.createElement("p"); 
+        locationText.classList.add("shows__concert-details"); 
+        locationText.innerText = arr[i].location;
 
-        postContent.appendChild(author);
-        postContent.appendChild(date);
-        postContent.appendChild(message);
+        let concertButton = document.createElement("button");
+        concertButton.classList.add("shows__concert-button"); 
+        concertButton.innerText = "BUY TICKETS"; 
 
-        let line = document.createElement("hr");
-        line.classList.add("comments__hr");
-        commentsContainer.appendChild(line); 
+        let hr = document.createElement("hr"); 
+        hr.classList.add("shows__hr"); 
+
+        showsWrapper.appendChild(showsConcert);
+
+        showsConcert.appendChild(dateContainer);
+        dateContainer.appendChild(dateLabelJs);
+        dateContainer.appendChild(dateText);
+
+        showsConcert.appendChild(venueContainer);
+        venueContainer.appendChild(venueLabelJs);
+        venueContainer.appendChild(venueText);
+
+        showsConcert.appendChild(locationContainer);
+        locationContainer.appendChild(locationLabelJs);
+        locationContainer.appendChild(locationText);
+
+        showsConcert.appendChild(concertButton);
+        showsConcert.appendChild(hr);
+
     }
-}
-
-preloadedComments(commentsArray); 
-
-    const form = document.querySelector(".comments__form"); 
-
-    // form.addEventListener("submit", function(event){
-    //     event.preventDefault();
-
-    //     let nameValue = event.target.name.value; 
-    //     let commentValue = event.target.comment.value; 
-
-    //     if (nameValue && commentValue){
-    //         commentsContainer.innerText = ''; 
-    //         commentsArray.unshift({
-    //             name: nameValue,
-    //             timestamp: '',
-    //             commentText: commentValue
-    //         });
-    //         for(i = 0; i < commentsArray.length; i++){
-    //             preloadedComments(commentsArray);
-    //         }
-    //     }
-
-    //     document.querySelector(".comments__form-field").value = ''; 
-    //     document.querySelector(".comments__form-field--comment").value = ''; 
-    // });
-
-
-
-function displayComment(object){
-
-    object = {
-        name: '',
-        timestamp: '02/11/2022',
-        commentText: ''
-    };
-
-       form.addEventListener("submit", function(event){
-        event.preventDefault();
-
-        let nameValue = event.target.name.value; 
-        let commentValue = event.target.comment.value; 
-
-        object.name = nameValue;
-        object.commentText = commentValue;
-
-        if (nameValue && commentValue){
-            commentsContainer.innerText = ''; 
-            commentsArray.unshift(object);
-
-            for(i = 0; i < commentsArray.length; i++){
-                preloadedComments(commentsArray);
-            }
-        }
-
-
-        // code to clear the input fields after submission
-        document.querySelector(".comments__form-field").value = ''; 
-        document.querySelector(".comments__form-field--comment").value = ''; 
-    });
 
 }
 
-displayComment(comment); 
+// shows(showsArray); 
