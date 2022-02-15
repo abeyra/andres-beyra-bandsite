@@ -19,7 +19,7 @@ const commentsArray = [
 
 const commentsContainer = document.querySelector(".comments__container"); 
 
-function preloadedComments(array){
+function displayComments(array){
     
     for (i = 0; i < array.length; i++){
       
@@ -66,66 +66,28 @@ function preloadedComments(array){
     }
 }
 
-preloadedComments(commentsArray); 
+displayComments(commentsArray); 
 
     const form = document.querySelector(".comments__form"); 
 
-    // form.addEventListener("submit", function(event){
-    //     event.preventDefault();
+form.addEventListener("submit", function(event){
+event.preventDefault();
 
-    //     let nameValue = event.target.name.value; 
-    //     let commentValue = event.target.comment.value; 
+let nameValue = event.target.name.value; 
+let commentValue = event.target.comment.value; 
 
-    //     if (nameValue && commentValue){
-    //         commentsContainer.innerText = ''; 
-    //         commentsArray.unshift({
-    //             name: nameValue,
-    //             timestamp: '',
-    //             commentText: commentValue
-    //         });
-    //         for(i = 0; i < commentsArray.length; i++){
-    //             preloadedComments(commentsArray);
-    //         }
-    //     }
+let comment = {
+    name: nameValue,
+    timestamp: new Date().toLocaleDateString(),
+    commentText: commentValue
+};
 
-    //     document.querySelector(".comments__form-field").value = ''; 
-    //     document.querySelector(".comments__form-field--comment").value = ''; 
-    // });
+    if (nameValue && commentValue){
+        commentsContainer.innerText = ''; 
+        commentsArray.unshift(comment);
 
+        displayComments(commentsArray); 
+        form.reset(); 
+    }
 
-
-function displayComment(object){
-
-    object = {
-        name: '',
-        timestamp: '02/11/2022',
-        commentText: ''
-    };
-
-       form.addEventListener("submit", function(event){
-        event.preventDefault();
-
-        let nameValue = event.target.name.value; 
-        let commentValue = event.target.comment.value; 
-
-        object.name = nameValue;
-        object.commentText = commentValue;
-
-        if (nameValue && commentValue){
-            commentsContainer.innerText = ''; 
-            commentsArray.unshift(object);
-
-            for(i = 0; i < commentsArray.length; i++){
-                preloadedComments(commentsArray);
-            }
-        }
-
-
-        // code to clear the input fields after submission
-        document.querySelector(".comments__form-field").value = ''; 
-        document.querySelector(".comments__form-field--comment").value = ''; 
-    });
-
-}
-
-displayComment(comment); 
+});
