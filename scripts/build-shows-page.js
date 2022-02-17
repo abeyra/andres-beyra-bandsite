@@ -50,6 +50,28 @@ let showsArray = [
     },
 ]; 
 
+    let showsSubHeadings = document.querySelector(".shows__sub-headings");
+
+    let dateSubHeading = document.createElement("p");
+    dateSubHeading.classList.add("shows__sub-headings-text");
+    dateSubHeading.innerText = "DATE";
+
+    let venueSubHeading = document.createElement("p");
+    venueSubHeading.classList.add("shows__sub-headings-text");
+    venueSubHeading.innerText = "VENUE";
+
+    let locationSubHeading = document.createElement("p");
+    locationSubHeading.classList.add("shows__sub-headings-text");
+    locationSubHeading.innerText = "LOCATION";
+
+    let emptySubHeading = document.createElement("p");
+    emptySubHeading.classList.add("shows__sub-headings-text");
+
+    showsSubHeadings.appendChild(dateSubHeading);
+    showsSubHeadings.appendChild(venueSubHeading);
+    showsSubHeadings.appendChild(locationSubHeading);
+    showsSubHeadings.appendChild(emptySubHeading);
+
 const showsWrapper = document.querySelector(".shows__wrapper"); 
 
 function shows(arr){
@@ -60,6 +82,7 @@ function shows(arr){
         showsConcert.classList.add("shows__concert");
 
         let dateContainer = document.createElement("div"); 
+        dateContainer.classList.add("shows__concert-details-container");
 
         let dateLabelJs = document.createElement("label"); 
         dateLabelJs.classList.add("shows__concert-label"); 
@@ -70,6 +93,7 @@ function shows(arr){
         dateText.innerText = arr[i].date;
 
         let venueContainer = document.createElement("div"); 
+        venueContainer.classList.add("shows__concert-details-container");
 
         let venueLabelJs = document.createElement("label");
         venueLabelJs.classList.add("shows__concert-label"); 
@@ -80,6 +104,7 @@ function shows(arr){
         venueText.innerText = arr[i].venue;
 
         let locationContainer = document.createElement("div");
+        locationContainer.classList.add("shows__concert-details-container");
 
         let locationLabelJs = document.createElement("label"); 
         locationLabelJs.classList.add("shows__concert-label");

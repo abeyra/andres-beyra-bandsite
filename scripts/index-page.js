@@ -5,13 +5,20 @@ const apiKey = "dcf59c38-5d4a-45bd-b58e-d40ff03ce8f8";
 const commentsContainer = document.querySelector(".comments__container"); 
 
 axios.get(url + 'comments?api_key=' + apiKey).then(response => {
-    console.log(response.data);
-    const commentsData = response.data;
+    console.log(response.data[0].name);
+
+    let commentsData = response.data;
+    // commentsData = commentsData.timestamp.sort(function(a,b){return a-b;}); 
+
+    commentsData.forEach((comment) => {
+        console.log(comment.timestamp);
+        // commentsData.timestamp.sort(function(a,b){return a-b;});
+    });
+
+    console.log(commentsData);
     displayComments(commentsData);   
 
-  
 });
-
 
     const form = document.querySelector(".comments__form"); 
 
@@ -40,7 +47,6 @@ axios.get(url + 'comments?api_key=' + apiKey).then(response => {
                         });
                 });
             }
-
 
     });
 

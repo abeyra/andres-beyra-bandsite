@@ -227,6 +227,9 @@ body {
   font-weight: 500;
   color: #AFAFAF;
 }
+.shows__sub-headings-text {
+  width: 150px;
+}
 .shows__concert {
   padding: 0 1rem 0 1rem;
   margin-bottom: 16px;
@@ -237,6 +240,9 @@ body {
 }
 .shows__concert--active {
   background-color: #E1E1E1;
+}
+.shows__concert-details-container {
+  width: 120px;
 }
 .shows__concert-label {
   font-size: 10px;
@@ -299,7 +305,6 @@ body {
   }
   .shows__sub-headings {
     display: flex;
-    width: 437px;
     justify-content: space-between;
   }
   .shows__wrapper {
