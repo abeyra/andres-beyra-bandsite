@@ -5,10 +5,14 @@ const apiKey = "dcf59c38-5d4a-45bd-b58e-d40ff03ce8f8";
 const commentsContainer = document.querySelector(".comments__container"); 
 
 axios.get(url + 'comments?api_key=' + apiKey).then(response => {
-    console.log(response.data[0].name);
+    console.log(response.data);
 
-    let commentsData = response.data;
-    // commentsData = commentsData.timestamp.sort(function(a,b){return a-b;}); 
+    let commentsData = response.data.sort((a,b) => {
+        let timeA = a.timestamp; 
+        let timeB = b.timestamp;
+        return timeB - timeA; 
+    });
+
 
     commentsData.forEach((comment) => {
         console.log(comment.timestamp);
@@ -40,16 +44,20 @@ axios.get(url + 'comments?api_key=' + apiKey).then(response => {
                     console.log(response.data);
                     axios.get(url + 'comments?api_key=' + apiKey)
                         .then(response => {
-                            displayComments(response.data);
+                            let commentsData = response.data.sort((a,b) => {
+                            let timeA = a.timestamp; 
+                            let timeB = b.timestamp;
+                            return timeB - timeA; 
+                        });
+                            displayComments(commentsData);
                         })
-                        .catch(response => {
+                        .catch(error => {
                             console.log(error);
                         });
                 });
             }
 
     });
-
 
 
 function displayComments(array){
