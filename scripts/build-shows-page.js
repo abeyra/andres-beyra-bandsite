@@ -99,7 +99,9 @@ function shows(arr){
 
         let dateText = document.createElement("p");
         dateText.classList.add("shows__concert-details", "shows__concert-details--bold");
-        dateText.innerText = arr[i].date;
+        let timestamp = parseInt(arr[i].date);
+        let options = {weekday: "short", month: "short", day: "numeric", year: "numeric"};
+        dateText.innerText = new Date(timestamp).toLocaleDateString('en-US', options);  
 
         let venueContainer = document.createElement("div"); 
         venueContainer.classList.add("shows__concert-details-container");
@@ -217,6 +219,8 @@ axios.get(url + 'showdates?api_key=' + apiKey).then(response => {
     console.log(response.data);
    
     showsArray = response.data; 
+    // date = parseInt(showsArray.date); 
+    // console.log(date); 
     // console.log(showsArray.date.JSON.parse()); 
     
     shows(showsArray); 
