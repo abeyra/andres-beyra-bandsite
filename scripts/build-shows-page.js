@@ -3,11 +3,6 @@ const url = "https://project-1-api.herokuapp.com/";
 
 const apiKey = "dcf59c38-5d4a-45bd-b58e-d40ff03ce8f8"; 
 
-// axios.get(url + 'showdates?api_key=' + apiKey).then(response => {
-//     console.log(response.data);
-//     showsArray = response.data; 
-// });
-
 // let showsArray = [
 //     {
 //         dateLabel: "DATE",
@@ -81,75 +76,95 @@ const apiKey = "dcf59c38-5d4a-45bd-b58e-d40ff03ce8f8";
     showsSubHeadings.appendChild(locationSubHeading);
     showsSubHeadings.appendChild(emptySubHeading);
 
-const showsWrapper = document.querySelector(".shows__wrapper"); 
+    
 
-function shows(arr){
-
-    for(i = 0; i < arr.length; i++){
-
-        let showsConcert = document.createElement("li");
-        showsConcert.classList.add("shows__concert");
-
-        let dateContainer = document.createElement("div"); 
-        dateContainer.classList.add("shows__concert-details-container");
-
-        let dateLabelJs = document.createElement("label"); 
-        dateLabelJs.classList.add("shows__concert-label"); 
-        dateLabelJs.innerText = "DATE";
-
-        let dateText = document.createElement("p");
-        dateText.classList.add("shows__concert-details", "shows__concert-details--bold");
-        let timestamp = parseInt(arr[i].date);
-        let options = {weekday: "short", month: "short", day: "numeric", year: "numeric"};
-        dateText.innerText = new Date(timestamp).toLocaleDateString('en-US', options);  
-
-        let venueContainer = document.createElement("div"); 
-        venueContainer.classList.add("shows__concert-details-container");
-
-        let venueLabelJs = document.createElement("label");
-        venueLabelJs.classList.add("shows__concert-label"); 
-        venueLabelJs.innerText = "VENUE";
-
-        let venueText = document.createElement("p");
-        venueText.classList.add("shows__concert-details"); 
-        venueText.innerText = arr[i].place;
-
-        let locationContainer = document.createElement("div");
-        locationContainer.classList.add("shows__concert-details-container");
-
-        let locationLabelJs = document.createElement("label"); 
-        locationLabelJs.classList.add("shows__concert-label");
-        locationLabelJs.innerText = "LOCATION";
-
-        let locationText = document.createElement("p"); 
-        locationText.classList.add("shows__concert-details"); 
-        locationText.innerText = arr[i].location;
-
-        let concertButton = document.createElement("button");
-        concertButton.classList.add("shows__concert-button"); 
-        concertButton.innerText = "BUY TICKETS"; 
-
-        showsWrapper.appendChild(showsConcert);
-
-        showsConcert.appendChild(dateContainer);
-        dateContainer.appendChild(dateLabelJs);
-        dateContainer.appendChild(dateText);
-
-        showsConcert.appendChild(venueContainer);
-        venueContainer.appendChild(venueLabelJs);
-        venueContainer.appendChild(venueText);
-
-        showsConcert.appendChild(locationContainer);
-        locationContainer.appendChild(locationLabelJs);
-        locationContainer.appendChild(locationText);
-
-        showsConcert.appendChild(concertButton);
-
-    }
-
-}
+axios.get(url + 'showdates?api_key=' + apiKey).then(response => {
+    console.log(response.data);
+   
+    showsArray = response.data; 
+    
+    const showsWrapper = document.querySelector(".shows__wrapper"); 
 
 
+    showsArray.forEach(concert => {
+            let showsConcert = document.createElement("li");
+            showsConcert.classList.add("shows__concert");
+
+            let dateContainer = document.createElement("div"); 
+            dateContainer.classList.add("shows__concert-details-container");
+
+            let dateLabelJs = document.createElement("label"); 
+            dateLabelJs.classList.add("shows__concert-label"); 
+            dateLabelJs.innerText = "DATE";
+
+            let dateText = document.createElement("p");
+            dateText.classList.add("shows__concert-details", "shows__concert-details--bold");
+            let timestamp = parseInt(concert.date);
+            let options = {weekday: "short", month: "short", day: "numeric", year: "numeric"};
+            dateText.innerText = new Date(timestamp).toLocaleDateString('en-US', options);  
+
+            let venueContainer = document.createElement("div"); 
+            venueContainer.classList.add("shows__concert-details-container");
+
+            let venueLabelJs = document.createElement("label");
+            venueLabelJs.classList.add("shows__concert-label"); 
+            venueLabelJs.innerText = "VENUE";
+
+            let venueText = document.createElement("p");
+            venueText.classList.add("shows__concert-details"); 
+            venueText.innerText = concert.place;
+
+            let locationContainer = document.createElement("div");
+            locationContainer.classList.add("shows__concert-details-container");
+
+            let locationLabelJs = document.createElement("label"); 
+            locationLabelJs.classList.add("shows__concert-label");
+            locationLabelJs.innerText = "LOCATION";
+
+            let locationText = document.createElement("p"); 
+            locationText.classList.add("shows__concert-details"); 
+            locationText.innerText = concert.location;
+
+            let concertButton = document.createElement("button");
+            concertButton.classList.add("shows__concert-button"); 
+            concertButton.innerText = "BUY TICKETS"; 
+
+            showsWrapper.appendChild(showsConcert);
+
+            showsConcert.appendChild(dateContainer);
+            dateContainer.appendChild(dateLabelJs);
+            dateContainer.appendChild(dateText);
+
+            showsConcert.appendChild(venueContainer);
+            venueContainer.appendChild(venueLabelJs);
+            venueContainer.appendChild(venueText);
+
+            showsConcert.appendChild(locationContainer);
+            locationContainer.appendChild(locationLabelJs);
+            locationContainer.appendChild(locationText);
+
+            showsConcert.appendChild(concertButton);
+    });
+
+    
+        document.querySelectorAll(".shows__concert").forEach(item => {
+        item.addEventListener("click", event => {
+            item.classList.add("shows__concert--active"); 
+        });  
+    }); 
+});
+
+
+// code to add event listener to all concert items 
+
+// document.querySelectorAll(".shows__concert").forEach(item => {
+//     item.addEventListener("click", event => {
+//         item.classList.add("shows__concert--active"); 
+//     });  
+// }); 
+
+
+// const showsWrapper = document.querySelector(".shows__wrapper"); 
 
 // function shows(arr){
 
@@ -163,29 +178,31 @@ function shows(arr){
 
 //         let dateLabelJs = document.createElement("label"); 
 //         dateLabelJs.classList.add("shows__concert-label"); 
-//         dateLabelJs.innerText = arr[i].dateLabel;
+//         dateLabelJs.innerText = "DATE";
 
 //         let dateText = document.createElement("p");
 //         dateText.classList.add("shows__concert-details", "shows__concert-details--bold");
-//         dateText.innerText = arr[i].date;
+//         let timestamp = parseInt(arr[i].date);
+//         let options = {weekday: "short", month: "short", day: "numeric", year: "numeric"};
+//         dateText.innerText = new Date(timestamp).toLocaleDateString('en-US', options);  
 
 //         let venueContainer = document.createElement("div"); 
 //         venueContainer.classList.add("shows__concert-details-container");
 
 //         let venueLabelJs = document.createElement("label");
 //         venueLabelJs.classList.add("shows__concert-label"); 
-//         venueLabelJs.innerText = arr[i].venueLabel;
+//         venueLabelJs.innerText = "VENUE";
 
 //         let venueText = document.createElement("p");
 //         venueText.classList.add("shows__concert-details"); 
-//         venueText.innerText = arr[i].venue;
+//         venueText.innerText = arr[i].place;
 
 //         let locationContainer = document.createElement("div");
 //         locationContainer.classList.add("shows__concert-details-container");
 
 //         let locationLabelJs = document.createElement("label"); 
 //         locationLabelJs.classList.add("shows__concert-label");
-//         locationLabelJs.innerText = arr[i].locationLabel;
+//         locationLabelJs.innerText = "LOCATION";
 
 //         let locationText = document.createElement("p"); 
 //         locationText.classList.add("shows__concert-details"); 
@@ -215,25 +232,4 @@ function shows(arr){
 
 // }
 
-axios.get(url + 'showdates?api_key=' + apiKey).then(response => {
-    console.log(response.data);
-   
-    showsArray = response.data; 
-    // date = parseInt(showsArray.date); 
-    // console.log(date); 
-    // console.log(showsArray.date.JSON.parse()); 
-    
-    shows(showsArray); 
-});
-
 // shows(showsArray); 
-
-// code to add event listener to all concert items 
-
-document.querySelectorAll(".shows__concert").forEach(item => {
-    item.addEventListener("click", event => {
-        item.classList.add("shows__concert--active"); 
-    });  
-}); 
-
-
