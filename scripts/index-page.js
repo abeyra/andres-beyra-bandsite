@@ -4,193 +4,102 @@ const apiKey = "dcf59c38-5d4a-45bd-b58e-d40ff03ce8f8";
 
 const commentsContainer = document.querySelector(".comments__container"); 
 
-axios.get(url + 'comments?api_key=' + apiKey).then(response => {
-    console.log(response.data);
+const form = document.querySelector(".comments__form"); 
 
-    let commentsData = response.data.sort((a,b) => {
-        let timeA = a.timestamp; 
-        let timeB = b.timestamp;
-        return timeB - timeA; 
-    });
+function createComment(comment){
 
-    commentsData.forEach((comment) => {
-        console.log(comment.timestamp);
-    });
+    let post = document.createElement("ul"); 
+    post.classList.add("comments__post"); 
 
-    console.log(commentsData);
-    commentsData.forEach(comment => {
+    let circleContainer = document.createElement("li"); 
 
-        let post = document.createElement("ul"); 
-        post.classList.add("comments__post"); 
+    let circle = document.createElement("div"); 
+    circle.classList.add("comments__post-circle"); 
 
-        let circleContainer = document.createElement("li"); 
+    let textContainer = document.createElement("li"); 
+    let postContent = document.createElement("div"); 
 
-        let circle = document.createElement("div"); 
-        circle.classList.add("comments__post-circle"); 
+    postContent.classList.add("comments__post-content"); 
 
-        let textContainer = document.createElement("li"); 
-        let postContent = document.createElement("div"); 
+    let author = document.createElement("h3"); 
+    author.classList.add("comments__post-author"); 
+    author.innerText = comment.name; 
 
-        postContent.classList.add("comments__post-content"); 
+    let date = document.createElement("p");
+    date.classList.add("comments__post-date");
+    date.innerText = new Date(comment.timestamp).toLocaleDateString();
 
-        let author = document.createElement("h3"); 
-        author.classList.add("comments__post-author"); 
-        author.innerText = comment.name; 
+    let message = document.createElement("p"); 
+    message.classList.add("comments__post-message"); 
+    message.innerText = comment.comment; 
 
-        let date = document.createElement("p");
-        date.classList.add("comments__post-date");
-        date.innerText = new Date(comment.timestamp).toLocaleDateString();
+    commentsContainer.appendChild(post); 
 
-        let message = document.createElement("p"); 
-        message.classList.add("comments__post-message"); 
-        message.innerText = comment.comment; 
+    post.appendChild(circleContainer); 
+    circleContainer.appendChild(circle); 
 
-        commentsContainer.appendChild(post); 
+    post.appendChild(textContainer); 
+    textContainer.appendChild(postContent); 
 
-        post.appendChild(circleContainer); 
-        circleContainer.appendChild(circle); 
+    postContent.appendChild(author);
+    postContent.appendChild(date);
+    postContent.appendChild(message);
 
-        post.appendChild(textContainer); 
-        textContainer.appendChild(postContent); 
+    let line = document.createElement("hr");
+    line.classList.add("comments__hr");
+    commentsContainer.appendChild(line); 
 
-        postContent.appendChild(author);
-        postContent.appendChild(date);
-        postContent.appendChild(message);
+}
 
-        let line = document.createElement("hr");
-        line.classList.add("comments__hr");
-        commentsContainer.appendChild(line); 
+function displayComments(){
 
-    }); 
+    axios.get(url + 'comments?api_key=' + apiKey)
+        .then(response => {
 
-});
+            let commentsData = response.data.sort((a,b) => {
+                let timeA = a.timestamp; 
+                let timeB = b.timestamp;
+                return timeB - timeA; 
+            });
 
-    const form = document.querySelector(".comments__form"); 
+            commentsData.forEach(comment => {
+                createComment(comment);
+            }); 
 
-    form.addEventListener("submit", function(event){
-        event.preventDefault();
+        })
+        .catch(error => {
+            console.log(error);
+        });
+}
 
-        let nameValue = event.target.name.value; 
-        let commentValue = event.target.comment.value; 
+function postComment(comment){
 
-        let comment = {
-            name: nameValue,
-            comment: commentValue
-        };
+    axios.post(url + 'comments?api_key=' + apiKey, comment)
+        .then(response => {
+            form.reset();
+            displayComments();
+        })
+        .catch(error => {
+            console.log(error);
+        });
+}
 
-        if(nameValue && commentValue){
-            commentsContainer.innerText = '';
-            axios.post(url + 'comments?api_key=' + apiKey, comment)
-                .then(response => {
-                    console.log(response.data);
-                    form.reset();
-                    axios.get(url + 'comments?api_key=' + apiKey)
-                        .then(response => {
-                            let commentsData = response.data.sort((a,b) => {
-                            let timeA = a.timestamp; 
-                            let timeB = b.timestamp;
-                            return timeB - timeA; 
-                        });
-                              commentsData.forEach(comment => {
+displayComments();
 
-                                let post = document.createElement("ul"); 
-                                post.classList.add("comments__post"); 
+form.addEventListener("submit", function(event){
+    event.preventDefault();
 
-                                let circleContainer = document.createElement("li"); 
+    let nameValue = event.target.name.value; 
+    let commentValue = event.target.comment.value; 
 
-                                let circle = document.createElement("div"); 
-                                circle.classList.add("comments__post-circle"); 
+    let comment = {
+        name: nameValue,
+        comment: commentValue
+    };
 
-                                let textContainer = document.createElement("li"); 
-                                let postContent = document.createElement("div"); 
-
-                                postContent.classList.add("comments__post-content"); 
-
-                                let author = document.createElement("h3"); 
-                                author.classList.add("comments__post-author"); 
-                                author.innerText = comment.name; 
-
-                                let date = document.createElement("p");
-                                date.classList.add("comments__post-date");
-                                date.innerText = new Date(comment.timestamp).toLocaleDateString();
-
-                                let message = document.createElement("p"); 
-                                message.classList.add("comments__post-message"); 
-                                message.innerText = comment.comment; 
-
-                                commentsContainer.appendChild(post); 
-
-                                post.appendChild(circleContainer); 
-                                circleContainer.appendChild(circle); 
-
-                                post.appendChild(textContainer); 
-                                textContainer.appendChild(postContent); 
-
-                                postContent.appendChild(author);
-                                postContent.appendChild(date);
-                                postContent.appendChild(message);
-
-                                let line = document.createElement("hr");
-                                line.classList.add("comments__hr");
-                                commentsContainer.appendChild(line); 
-
-                            });
-                        })
-                        .catch(error => {
-                            console.log(error);
-                        });
-                });
-            }
+    if(nameValue && commentValue){
+        commentsContainer.innerText = '';
+        postComment(comment);
+    }
 
     });
-
-
-// function displayComments(array){
-    
-//     for (i = 0; i < array.length; i++){
-      
-//         let post = document.createElement("ul"); 
-//         post.classList.add("comments__post"); 
-
-//         let circleContainer = document.createElement("li"); 
-
-//         let circle = document.createElement("div"); 
-//         circle.classList.add("comments__post-circle"); 
-
-//         let textContainer = document.createElement("li"); 
-//         let postContent = document.createElement("div"); 
-
-//         postContent.classList.add("comments__post-content"); 
-
-//         let author = document.createElement("h3"); 
-//         author.classList.add("comments__post-author"); 
-//         author.innerText = array[i].name; 
-
-//         let date = document.createElement("p");
-//         date.classList.add("comments__post-date");
-//         date.innerText = new Date(array[i].timestamp).toLocaleDateString();
-
-//         let message = document.createElement("p"); 
-//         message.classList.add("comments__post-message"); 
-//         message.innerText = array[i].comment; 
-
-//         commentsContainer.appendChild(post); 
-
-//         post.appendChild(circleContainer); 
-//         circleContainer.appendChild(circle); 
-
-//         post.appendChild(textContainer); 
-//         textContainer.appendChild(postContent); 
-
-//         postContent.appendChild(author);
-//         postContent.appendChild(date);
-//         postContent.appendChild(message);
-
-//         let line = document.createElement("hr");
-//         line.classList.add("comments__hr");
-//         commentsContainer.appendChild(line); 
-//     }
-// }
-
-// displayComments(commentsArray); 
-
