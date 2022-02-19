@@ -201,34 +201,34 @@ body {
   color: #FFFFFF;
 }
 
-.article {
+.band-info {
   display: flex;
   flex-direction: column;
   margin: 0 1rem 0 1rem;
 }
-.article__title {
+.band-info__title {
   font-size: 1.5rem;
   font-weight: 500;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
-.article__img {
+.band-info__img {
   max-height: 10.625rem;
   width: 90vw;
   margin-bottom: 1rem;
 }
-.article__quote {
+.band-info__quote {
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 500;
 }
-.article__sub-title {
+.band-info__sub-title {
   font-size: 0.875rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.article__copy {
+.band-info__copy {
   font-size: 0.8125rem;
   opacity: 0.8;
   line-height: 1.125rem;
@@ -372,38 +372,38 @@ body {
     font-size: 4rem;
   }
 
-  .article {
+  .band-info {
     margin: 0 2.25rem 0 2.25rem;
   }
-  .article__title {
+  .band-info__title {
     font-size: 2.25rem;
     padding-top: 3rem;
     padding-bottom: 2.25rem;
   }
-  .article__content {
+  .band-info__content {
     margin: 0 3.5rem 0 3.5rem;
     position: relative;
   }
-  .article__img {
+  .band-info__img {
     max-height: 19.0625rem;
     width: 100%;
     margin-bottom: 2rem;
   }
-  .article__quote-statement {
+  .band-info__quote-statement {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-  .article__sub-title {
+  .band-info__sub-title {
     font-size: 1.375rem;
     padding-top: 2.5rem;
     padding-bottom: 1.5rem;
     font-weight: 500;
   }
-  .article__copy-container {
+  .band-info__copy-container {
     display: flex;
     justify-content: space-between;
   }
-  .article__copy {
+  .band-info__copy {
     font-size: 0.875rem;
     line-height: 1.25rem;
     padding-bottom: 2rem;
@@ -486,19 +486,19 @@ body {
     padding: 0 7.5rem 0 7.5rem;
   }
 
-  .article {
+  .band-info {
     margin: 0 7.5rem 0 7.5rem;
   }
-  .article__content {
+  .band-info__content {
     margin: 0 5rem 0 5rem;
   }
-  .article__img {
+  .band-info__img {
     max-height: 28.125rem;
   }
-  .article__quote-statement {
+  .band-info__quote-statement {
     max-width: 45.625rem;
   }
-  .article__copy {
+  .band-info__copy {
     max-width: 26.5625rem;
     line-height: 1.375rem;
   }
