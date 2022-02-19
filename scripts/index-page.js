@@ -45,10 +45,6 @@ function createComment(comment){
     postContent.appendChild(date);
     postContent.appendChild(message);
 
-    let line = document.createElement("hr");
-    line.classList.add("comments__hr");
-    commentsContainer.appendChild(line); 
-
 }
 
 function displayComments(){
