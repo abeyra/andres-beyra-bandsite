@@ -38,7 +38,7 @@ function createConcert(concert){
     let dateContainer = document.createElement("div"); 
     dateContainer.classList.add("shows__concert-details-container");
 
-    let dateLabelJs = document.createElement("label"); 
+    let dateLabelJs = document.createElement("h3"); 
     dateLabelJs.classList.add("shows__concert-label"); 
     dateLabelJs.innerText = "DATE";
 
@@ -51,7 +51,7 @@ function createConcert(concert){
     let venueContainer = document.createElement("div"); 
     venueContainer.classList.add("shows__concert-details-container");
 
-    let venueLabelJs = document.createElement("label");
+    let venueLabelJs = document.createElement("h3");
     venueLabelJs.classList.add("shows__concert-label"); 
     venueLabelJs.innerText = "VENUE";
 
@@ -62,7 +62,7 @@ function createConcert(concert){
     let locationContainer = document.createElement("div");
     locationContainer.classList.add("shows__concert-details-container");
 
-    let locationLabelJs = document.createElement("label"); 
+    let locationLabelJs = document.createElement("h3"); 
     locationLabelJs.classList.add("shows__concert-label");
     locationLabelJs.innerText = "LOCATION";
 

@@ -112,6 +112,7 @@ body {
 
 @media screen and (min-width: 48rem) {
     .header {
+
         &__nav {
             flex-direction: row;
             // align-items: center; 
@@ -180,12 +181,15 @@ body {
 
 @media screen and (min-width: 80rem) {
     .header {
+
         &__nav-logo {
             margin: 2.5rem -0.5rem 2.5rem 7.5rem;
         }
+
         &__nav-links {
             margin: 2.5rem 0 0 4rem;
         }
+
         &__nav-page {
             margin-right: 2.25rem;
             width: 100%;
@@ -194,6 +198,7 @@ body {
 
      .footer {
         padding: 0 7.5rem 0 7.5rem;
+        
         &__title {
             margin-right: 4rem; 
         }
