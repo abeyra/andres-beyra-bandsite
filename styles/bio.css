@@ -27,6 +27,11 @@ body {
   align-self: center;
   text-decoration: none;
 }
+@media (min-width: 48rem) {
+  .header__nav {
+    flex-direction: row;
+  }
+}
 .header__nav-logo {
   color: #FFFFFF;
   font-size: 1.5rem;
@@ -35,12 +40,34 @@ body {
   max-width: 7.5rem;
   margin: 1rem 0 0.5rem 0;
 }
+@media (min-width: 48rem) {
+  .header__nav-logo {
+    margin: 1.5rem 0 1.5rem 2.5rem;
+    font-size: 2rem;
+    width: 120px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .header__nav-logo {
+    margin: 2.5rem -0.5rem 2.5rem 7.5rem;
+  }
+}
 .header__nav-links {
   display: flex;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 400;
   color: #E1E1E1;
+}
+@media (min-width: 48rem) {
+  .header__nav-links {
+    margin: 1.5rem 0 0 4rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .header__nav-links {
+    margin: 2.5rem 0 0 4rem;
+  }
 }
 .header__nav-links--active {
   border-bottom: 0.1875rem solid white;
@@ -56,6 +83,18 @@ body {
   text-decoration: none;
   color: #E1E1E1;
 }
+@media (min-width: 48rem) {
+  .header__nav-page {
+    margin-right: 3.5rem;
+    width: 32%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .header__nav-page {
+    margin-right: 2.25rem;
+    width: 100%;
+  }
+}
 
 .footer {
   display: flex;
@@ -65,23 +104,80 @@ body {
   color: #FFFFFF;
   margin-top: 16px;
 }
+@media (min-width: 48rem) {
+  .footer {
+    padding: 0 2.25rem 0 2.25rem;
+    position: relative;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .footer {
+    padding: 0 7.5rem 0 7.5rem;
+  }
+}
+@media (min-width: 48rem) {
+  .footer__contact {
+    display: flex;
+    align-items: center;
+    margin: 3rem 0 2.25rem 0;
+  }
+}
 .footer__title {
   font-size: 1.5rem;
   font-weight: 500;
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
+@media (min-width: 48rem) {
+  .footer__title {
+    font-size: 2.25rem;
+    padding: 0;
+    margin-right: 2.5rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .footer__title {
+    margin-right: 4rem;
+  }
+}
 .footer__social-media {
   padding-bottom: 1rem;
+}
+@media (min-width: 48rem) {
+  .footer__social-media {
+    padding: 0;
+  }
 }
 .footer__social-media-icon {
   padding-right: 1.5rem;
   height: 1.375rem;
 }
+@media (min-width: 48rem) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .footer__wrapper {
+    justify-content: normal;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .footer__wrapper-column {
+    padding-right: 5rem;
+  }
+}
 .footer__container {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   margin-bottom: 1rem;
+}
+@media (min-width: 48rem) {
+  .footer__container {
+    font-size: 0.875rem;
+    line-height: 1.25;
+  }
 }
 .footer__container--bold {
   font-weight: 600;
@@ -90,64 +186,18 @@ body {
 .footer__copyright-container {
   margin-top: 3rem;
 }
+@media (min-width: 48rem) {
+  .footer__copyright-container {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
 .footer__copyright-title {
   font-size: 1.5rem;
   max-height: 1.25rem;
   max-width: 7.5rem;
 }
-.footer__copyright-text {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  margin: 1rem 0 1rem 0;
-}
-
-@media screen and (min-width: 48rem) {
-  .header__nav {
-    flex-direction: row;
-  }
-  .header__nav-logo {
-    margin: 1.5rem 0 1.5rem 2.5rem;
-    font-size: 2rem;
-    width: 120px;
-  }
-  .header__nav-links {
-    margin: 1.5rem 0 0 4rem;
-  }
-  .header__nav-page {
-    margin-right: 3.5rem;
-    width: 32%;
-  }
-
-  .footer {
-    padding: 0 2.25rem 0 2.25rem;
-    position: relative;
-  }
-  .footer__contact {
-    display: flex;
-    align-items: center;
-    margin: 3rem 0 2.25rem 0;
-  }
-  .footer__title {
-    font-size: 2.25rem;
-    font-weight: 37.5rem;
-    padding: 0;
-    margin-right: 2.5rem;
-  }
-  .footer__social-media {
-    padding: 0;
-  }
-  .footer__wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-  .footer__container {
-    font-size: 0.875rem;
-    line-height: 1.25;
-  }
-  .footer__copyright-container {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-  }
+@media (min-width: 48rem) {
   .footer__copyright-title {
     position: absolute;
     top: 3.5rem;
@@ -156,33 +206,16 @@ body {
   }
 }
 @media screen and (min-width: 80rem) {
-  .header__nav-logo {
-    margin: 2.5rem -0.5rem 2.5rem 7.5rem;
-  }
-  .header__nav-links {
-    margin: 2.5rem 0 0 4rem;
-  }
-  .header__nav-page {
-    margin-right: 2.25rem;
-    width: 100%;
-  }
-
-  .footer {
-    padding: 0 7.5rem 0 7.5rem;
-  }
-  .footer__title {
-    margin-right: 4rem;
-  }
-  .footer__wrapper {
-    justify-content: normal;
-  }
-  .footer__wrapper-column {
-    padding-right: 5rem;
-  }
   .footer__copyright-title {
     right: 7.5rem;
   }
 }
+.footer__copyright-text {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  margin: 1rem 0 1rem 0;
+}
+
 .hero {
   display: flex;
   background-image: url(../assets/images/hero-bio.jpg);

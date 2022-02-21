@@ -103,7 +103,7 @@ function getConcerts(){
         
             document.querySelectorAll(".shows__concert").forEach(item => {
                 item.addEventListener("click", event => {
-                    item.classList.add("shows__concert--active"); 
+                    item.classList.toggle("shows__concert--active"); 
                 });  
             }); 
         })
