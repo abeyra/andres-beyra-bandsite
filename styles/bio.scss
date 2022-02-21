@@ -1,5 +1,6 @@
 @use 'partials/colors' as *;  
 @use 'partials/fonts' as *; 
+@use 'partials/mixins' as *;
 @use 'partials/global' as *; 
 
 .hero {
@@ -13,11 +14,24 @@
     width: 100vw;
     padding: 0 1rem 0 1rem;
 
+    @include tablet {
+        height: 37.5rem; 
+        padding: 0 2.25rem 0 2.25rem;
+    }
+
+    @include desktop {
+        padding: 0 7.5rem 0 7.5rem;
+    }
+
     &__text {
         align-self: center;
         font-size: 1.5rem; 
         font-weight: 600; 
         color: $white; 
+
+        @include tablet {
+            font-size: 4rem;
+        }
     }
 }
 
@@ -26,18 +40,53 @@
     flex-direction: column;
     margin: 0 1rem 0 1rem;
 
+    @include tablet {
+        margin: 0 2.25rem 0 2.25rem;
+    }
+
+    @include desktop {
+        margin: 0 7.5rem 0 7.5rem;
+    }
+
     &__title {
         font-size: 1.5rem;
         font-weight: 500;
         padding-top: 1.5rem;
         padding-bottom: 1rem;
+
+        @include tablet {
+            font-size: 2.25rem;
+            padding-top: 3rem;
+            padding-bottom: 2.25rem;
         }
+    }
+
+    &__content {
+        @include tablet {
+            margin: 0 3.5rem 0 3.5rem;
+            position: relative;
+        }
+
+        @include desktop {
+            margin: 0 5rem 0 5rem; 
+        }
+    }
 
     &__img {
         max-height: 10.625rem; 
         width: 90vw; 
         margin-bottom: 1rem; 
+
+        @include tablet {
+            max-height: 19.0625rem;
+            width: 100%;
+            margin-bottom: 2rem;
         }
+
+        @include desktop {
+            max-height: 28.125rem;
+        }
+    }
 
     &__quote {
         padding-bottom: .5rem;
@@ -46,10 +95,35 @@
         font-weight: 500; 
     }
 
+    &__quote-statement {
+        @include tablet {
+            font-size: 1.25rem; 
+            line-height: 1.75rem; 
+        }
+
+        @include desktop {
+            max-width: 45.625rem;
+        }
+    }
+
     &__sub-title {
         font-size: .875rem; 
         padding-top: 1rem; 
         padding-bottom: 1rem; 
+
+        @include tablet {
+            font-size: 1.375rem;
+            padding-top: 2.5rem;
+            padding-bottom: 1.5rem;
+            font-weight: 500;
+        }
+    }
+
+    &__copy-container {
+        @include tablet {
+            display: flex;
+            justify-content: space-between; 
+        }
     }
 
     &__copy { 
@@ -57,6 +131,18 @@
         opacity: .8;
         line-height: 1.125rem;
         padding-bottom: 1rem;
+
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.25rem;
+            padding-bottom: 2rem;
+            max-width: 17.3125rem;
+        }
+
+        @include desktop {
+            max-width: 26.5625rem; 
+            line-height: 1.375rem;
+        }
     }
 }
 
@@ -65,18 +151,50 @@
     flex-direction: column;
     background-color: $alabaster;
 
+    @include tablet {
+        padding: 0 2.25rem .75rem 2.25rem; 
+    }
+
+    @include desktop {
+        padding: 0 7.5rem .75rem 7.5rem;
+    }
+
     &__title {
         font-size: 1.5rem;
         font-weight: 500;
         padding-top: 1.5rem;
         padding-bottom: 1rem;
         margin: 0 1rem 0 1rem;
+
+        @include tablet {
+            margin: 0; 
+            font-size: 2.25rem;
+            padding: 3rem 0 2.25rem 0;
+        }
+    }
+
+    &__container {
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+        }
     }
 
     &__img {
         max-height: 10.625rem; 
         width: 90vw; 
         margin: 0 1rem 1rem 1rem;
+
+        @include tablet {
+            margin: 0 0 1.5rem 0; 
+            max-height: 10.625rem;
+            width: 31%; 
+        }
+
+        @include desktop {
+            width: 32%;
+        }
     }
 }
 
@@ -85,11 +203,33 @@
     flex-direction: column;
     margin: 0 1rem 0 1rem;
 
+    @include tablet {
+        margin: 0 2.25rem 0 2.25rem;
+    }
+
+    @include desktop {
+        margin: 0 7.5rem; 
+    }
+
     &__title {
         font-size: 1.5rem;
         font-weight: 500;
         padding: 1rem 0;
-        // margin: 0 1rem 0 1rem;
+
+        @include tablet {
+            font-size: 2.25rem;
+            padding: 3rem 0 2.25rem 0;
+        }
+    }
+
+    &__wrapper {
+        @include tablet {
+            margin: 0 3.5rem 0 3.5rem;
+        }
+
+        @include desktop {
+            margin: 0 16rem;
+        }
     }
 
     &__input-container {
@@ -108,18 +248,32 @@
         border-radius: 50%;
         float: left;
         margin: 26px 16px 0 0;
+
+        @include tablet {
+            max-width: 48px;
+            max-height: 48px;
+            width: 48px; 
+            height: 48px; 
+            margin-right: 12px;
+        }
     }
     
     &__form {
         display: flex;
         flex-direction: column;
+
         &-label {
             color: $silver;
             font-size: 10px;
             font-weight: 500;
             line-height: 20px;
             margin-bottom: 4px;
+
+            @include tablet {
+                font-size: 12px;
+            }
         }
+
         &-field {
             min-height: 36px;
             width: 100%;
@@ -130,18 +284,27 @@
             padding: 10px; 
             margin-bottom: 16px;
             background-color: $alabaster;
+
+            @include tablet {
+                min-height: 48px;
+                padding: 16px;
+            }
+
             &:focus {
                 border: 1px solid $bandsite-black;
                 outline: none; 
             }
+
             &:invalid {
                 border: 1px solid $error; 
             }
+
             &--comment {
                 resize: none;
                 height: 100px;
             }
         }
+
         &-button {
             font-size: 16px;
             line-height: 20px;
@@ -152,19 +315,28 @@
             border: none;
             cursor: pointer;
             margin-bottom: 16px;
+
+            @include tablet {
+                width: 30%;
+                align-self: flex-end;
+                margin: 8px 0 24px 0;
+            }
+
             &:hover {
                 background-color: $bandsite-darkblack;
             }
         }
     }
-    &__hr {
-        width: 100%;
-        opacity: .5;
-    }
+
     &__post {
         position: relative;
         padding: 16px 0 16px 0;
         border-bottom: 1px solid $mercury;
+
+        @include tablet {
+            padding: 24px 0 24px 0;
+        }
+
         &-circle {
             border-radius: 50%;
             width: 36px; 
@@ -172,29 +344,51 @@
             float: left;
             margin-top: -4px;
             margin-right: 16px;
-            background-color: $mercury; 
+            background-color: $mercury;
+            
+            @include tablet {
+                max-width: 48px;
+                max-height: 48px;
+                width: 48px;
+                height: 48px;
+            }
         }
+
         &-content {
             display: flex;
             flex-direction: column;
         }
+
         &-author {
             font-size: 13px;
             font-weight: 500;
-            // margin-top: 8px;
-        }   
+
+            @include tablet {
+                font-size: 14px;
+            }
+        }  
+
         &-date {
             position: absolute;
             right: 0; 
-            // top: 8px;
             font-size: 12px;
             color: $silver;
+
+            @include tablet {
+                font-size: 14px;
+            }
         }
+
         &-message {
             font-size: 13px;
             line-height: 18px;
             margin-top: 8px;
             opacity: .9;
+
+            @include tablet {
+                font-size: 14px;
+                line-height: 22px;
+            }
         }
     }
     
@@ -202,133 +396,143 @@
 
 @media screen and (min-width: 48rem) {
    
-    .hero {
-        height: 37.5rem; 
-        padding: 0 2.25rem 0 2.25rem; 
+    // .hero {
+    //     height: 37.5rem; 
+    //     padding: 0 2.25rem 0 2.25rem; 
 
-        &__text {
-            font-size: 4rem;
-        }
-    }
+    //     &__text {
+    //         font-size: 4rem;
+    //     }
+    // }
 
     .band-info {
-        margin: 0 2.25rem 0 2.25rem;
+        // margin: 0 2.25rem 0 2.25rem;
 
-        &__title {
-            font-size: 2.25rem;
-            padding-top: 3rem;
-            padding-bottom: 2.25rem;
-        }
+        // &__title {
+        //     font-size: 2.25rem;
+        //     padding-top: 3rem;
+        //     padding-bottom: 2.25rem;
+        // }
 
-        &__content {
-            margin: 0 3.5rem 0 3.5rem;
-            position: relative;
-        }
+        // &__content {
+        //     margin: 0 3.5rem 0 3.5rem;
+        //     position: relative;
+        // }
 
-        &__img {
-            max-height: 19.0625rem;
-            width: 100%;
-            margin-bottom: 2rem;
-        }
+        // &__img {
+        //     max-height: 19.0625rem;
+        //     width: 100%;
+        //     margin-bottom: 2rem;
+        // }
 
-        &__quote-statement {
-            font-size: 1.25rem; 
-            line-height: 1.75rem; 
-        }
+        // &__quote-statement {
+        //     font-size: 1.25rem; 
+        //     line-height: 1.75rem; 
+        // }
 
-        &__sub-title {
-            font-size: 1.375rem;
-            padding-top: 2.5rem;
-            padding-bottom: 1.5rem;
-            font-weight: 500;
-        }
+        // &__sub-title {
+        //     font-size: 1.375rem;
+        //     padding-top: 2.5rem;
+        //     padding-bottom: 1.5rem;
+        //     font-weight: 500;
+        // }
 
-        &__copy-container {
-            display: flex;
-            justify-content: space-between; 
-        }
+        // &__copy-container {
+        //     display: flex;
+        //     justify-content: space-between; 
+        // }
 
-        &__copy {
-            font-size: .875rem;
-            line-height: 1.25rem;
-            padding-bottom: 2rem;
-            max-width: 17.3125rem;
-        }
+        // &__copy {
+        //     font-size: .875rem;
+        //     line-height: 1.25rem;
+        //     padding-bottom: 2rem;
+        //     max-width: 17.3125rem;
+        // }
     }
 
     .photo-gallery {
-        padding: 0 2.25rem .75rem 2.25rem; 
+        // padding: 0 2.25rem .75rem 2.25rem; 
 
-        &__title {
-            margin: 0; 
-            font-size: 2.25rem;
-            padding: 3rem 0 2.25rem 0; 
-        }
+        // &__title {
+        //     margin: 0; 
+        //     font-size: 2.25rem;
+        //     padding: 3rem 0 2.25rem 0; 
+        // }
 
-        &__container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between; 
-        }
+        // &__container {
+        //     display: flex;
+        //     flex-wrap: wrap;
+        //     justify-content: space-between; 
+        // }
 
-        &__img {
-            margin: 0 0 1.5rem 0; 
-            max-height: 10.625rem;
-            width: 31%; 
-        }
+        // &__img {
+        //     margin: 0 0 1.5rem 0; 
+        //     max-height: 10.625rem;
+        //     width: 31%; 
+        // }
     }
 
     .comments {
-        margin: 0 2.25rem 0 2.25rem;
-        &__title {
-            font-size: 2.25rem;
-            padding: 3rem 0 2.25rem 0;
-        }
-        &__wrapper {
-            margin: 0 3.5rem 0 3.5rem;
-        }
-        &__avatar-img {
-            max-width: 48px;
-            max-height: 48px;
-            width: 48px; 
-            height: 48px; 
-            margin-right: 12px;
-        }
+        // margin: 0 2.25rem 0 2.25rem;
+
+        // &__title {
+        //     font-size: 2.25rem;
+        //     padding: 3rem 0 2.25rem 0;
+        // }
+
+        // &__wrapper {
+        //     margin: 0 3.5rem 0 3.5rem;
+        // }
+
+        // &__avatar-img {
+        //     max-width: 48px;
+        //     max-height: 48px;
+        //     width: 48px; 
+        //     height: 48px; 
+        //     margin-right: 12px;
+        // }
+
         &__form {
-            &-label {
-                font-size: 12px;
-            }
-            &-field {
-                min-height: 48px;
-                padding: 16px;
-            }
-            &-button {
-                width: 30%;
-                align-self: flex-end;
-                margin: 8px 0 24px 0; 
-            }
+
+            // &-label {
+            //     font-size: 12px;
+            // }
+
+            // &-field {
+            //     min-height: 48px;
+            //     padding: 16px;
+            // }
+
+            // &-button {
+            //     width: 30%;
+            //     align-self: flex-end;
+            //     margin: 8px 0 24px 0; 
+            // }
         }
-        &__hr {
-            margin-bottom: 24px; 
-        }
+        
         &__post {
-            margin: 24px 0 24px 0; 
-            &-circle {
-                max-width: 48px;
-                max-height: 48px;
-                width: 48px;
-                height: 48px;
-            }
-            &-author {
-                font-size: 14px;
-            }
-            &-date {
-                font-size: 14px;
-            }
-            &-message {
-                font-size: 14px;
-                line-height: 22px;
-            }
+            // margin: 24px 0 24px 0; 
+
+            // &-circle {
+            //     max-width: 48px;
+            //     max-height: 48px;
+            //     width: 48px;
+            //     height: 48px;
+            // }
+
+            // &-author {
+            //     font-size: 14px;
+            // }
+
+            // &-date {
+            //     font-size: 14px;
+            // }
+
+            // &-message {
+            //     font-size: 14px;
+            //     line-height: 22px;
+            // }
+
         }
     }
 
@@ -336,42 +540,44 @@
 
 @media screen and (min-width: 80rem) {
 
-    .hero {
-        padding: 0 7.5rem 0 7.5rem;
-    }
+    // .hero {
+    //     padding: 0 7.5rem 0 7.5rem;
+    // }
 
     .band-info {
-        margin: 0 7.5rem 0 7.5rem;
+        // margin: 0 7.5rem 0 7.5rem;
 
-        &__content {
-            margin: 0 5rem 0 5rem; 
-        }
+        // &__content {
+        //     margin: 0 5rem 0 5rem; 
+        // }
 
-        &__img {
-            max-height: 28.125rem;
-        }
+        // &__img {
+        //     max-height: 28.125rem;
+        // }
 
-        &__quote-statement {
-            max-width: 45.625rem; 
-        }
+        // &__quote-statement {
+        //     max-width: 45.625rem; 
+        // }
 
-        &__copy {
-            max-width: 26.5625rem; 
-            line-height: 1.375rem;
-        }
+        // &__copy {
+        //     max-width: 26.5625rem; 
+        //     line-height: 1.375rem;
+        // }
     }
 
     .photo-gallery {
-        padding: 0 7.5rem .75rem 7.5rem;
-        &__img {
-            width: 32%;
-        }
+        // padding: 0 7.5rem .75rem 7.5rem;
+
+        // &__img {
+        //     width: 32%;
+        // }
     }
 
     .comments {
-        margin: 0 7.5rem; 
-        &__wrapper {
-            margin: 0 16rem;
-        }
+        // margin: 0 7.5rem; 
+
+        // &__wrapper {
+        //     margin: 0 16rem;
+        // }
     }
 }
