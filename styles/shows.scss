@@ -1,5 +1,6 @@
 @use 'partials/colors' as *;  
 @use 'partials/fonts' as *; 
+@use 'partials/mixins' as *;
 @use 'partials/global' as *; 
 
 .hero {
@@ -94,12 +95,6 @@
             cursor: pointer;
         }
     }
-    &__hr {
-        opacity: .5; 
-        stroke-width: 1px;
-        margin-bottom: 16px;
-    }
-    
 }
 
 @media screen and (min-width: 48rem) {
@@ -134,7 +129,6 @@
             justify-content: space-between;
         }
         &__wrapper {
-            padding-bottom: 8px; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -172,12 +166,6 @@
                 }
             }
         }
-        &__hr {
-            width: 95%; 
-        }
-    }
-    .footer {
-        margin-top: 24px; 
     }
 }
 
@@ -224,9 +212,6 @@
             width: 65%; 
             margin: 0 88px; 
             padding-top: 10px; 
-        }
-        &__hr {
-            width: 97%; 
         }
     }
 }

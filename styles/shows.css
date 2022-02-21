@@ -109,6 +109,7 @@ body {
 @media (min-width: 48rem) {
   .footer {
     padding: 0 2.25rem 0 2.25rem;
+    margin-top: 32px;
     position: relative;
   }
 }
@@ -306,11 +307,6 @@ body {
   padding: 10px;
   cursor: pointer;
 }
-.shows__hr {
-  opacity: 0.5;
-  stroke-width: 1px;
-  margin-bottom: 16px;
-}
 
 @media screen and (min-width: 48rem) {
   .hero {
@@ -343,7 +339,6 @@ body {
     justify-content: space-between;
   }
   .shows__wrapper {
-    padding-bottom: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -380,13 +375,6 @@ body {
   }
   .shows__concert-button:hover {
     background: #000000;
-  }
-  .shows__hr {
-    width: 95%;
-  }
-
-  .footer {
-    margin-top: 24px;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -430,8 +418,5 @@ body {
     width: 65%;
     margin: 0 88px;
     padding-top: 10px;
-  }
-  .shows__hr {
-    width: 97%;
   }
 }/*# sourceMappingURL=shows.css.map */

@@ -1,6 +1,6 @@
-@use './colors' as *;
-@use './fonts' as *;
-@use './mixins' as *; 
+@use 'colors' as *;
+@use 'fonts' as *;
+@use 'mixins' as *; 
 
 * {
     box-sizing: border-box;
@@ -99,6 +99,7 @@ body {
 
     @include tablet {
         padding: 0 2.25rem 0 2.25rem;
+        margin-top: 32px;
         position: relative;
     }
 
