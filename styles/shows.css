@@ -219,6 +219,12 @@ body {
   margin: 1rem 0 1rem 0;
 }
 
+@media screen and (min-width: 80rem) {
+  .header__nav-page {
+    width: 60px;
+  }
+}
+
 .hero {
   background-image: url(../assets/images/hero-shows.jpg);
   background-position: center;
@@ -229,11 +235,38 @@ body {
   width: 100vw;
   padding: 0 1rem 0 1rem;
 }
+@media (min-width: 48rem) {
+  .hero {
+    padding: 0 2.25rem 0 2.25rem;
+    height: 465px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .hero {
+    padding: 0 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 650px;
+  }
+}
 .hero__album {
   color: #FFFFFF;
   font-size: 14px;
   font-weight: 500;
   padding: 2rem 0 1rem 0;
+}
+@media (min-width: 48rem) {
+  .hero__album {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 3.5rem 0 1rem 0;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .hero__album {
+    padding: 0 0 1rem 0;
+  }
 }
 .hero__band-name {
   align-self: center;
@@ -243,17 +276,64 @@ body {
   max-width: 240px;
   color: #FFFFFF;
 }
+@media (min-width: 48rem) {
+  .hero__band-name {
+    font-size: 56px;
+    line-height: 68px;
+    max-width: 550px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .hero__band-name {
+    max-width: 470px;
+  }
+}
 .hero__soundcloud-song {
   max-height: 100px;
   border-radius: 4px;
   margin-top: 16px;
 }
+@media (min-width: 48rem) {
+  .hero__soundcloud-song {
+    margin-top: 40px;
+    max-height: 135px;
+    width: 54%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .hero__soundcloud-song {
+    max-height: 130px;
+    padding-left: 220px;
+  }
+}
 
+@media screen and (min-width: 80rem) {
+  .shows {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
 .shows__title {
   font-size: 24px;
   line-height: 32px;
   font-weight: 500;
   padding: 32px 1rem 16px 1rem;
+}
+@media (min-width: 48rem) {
+  .shows__title {
+    padding: 48px 2.25rem 48px 2.25rem;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .shows__title {
+    display: inline;
+    padding: 48px 7.5rem 0 7.5rem;
+    align-self: baseline;
+  }
 }
 .shows__sub-headings {
   display: none;
@@ -263,13 +343,50 @@ body {
   font-weight: 500;
   color: #AFAFAF;
 }
+@media (min-width: 48rem) {
+  .shows__sub-headings {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .shows__sub-headings {
+    align-self: center;
+  }
+}
 .shows__sub-headings-text {
   width: 150px;
+}
+@media (min-width: 48rem) {
+  .shows__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .shows__wrapper {
+    width: 65%;
+    margin: 0 88px;
+    padding-top: 10px;
+  }
 }
 .shows__concert {
   padding: 0 1rem 0 1rem;
   margin-bottom: 16px;
   border-bottom: 1px solid #E1E1E1;
+}
+@media (min-width: 48rem) {
+  .shows__concert {
+    padding: 0 2.25rem 0 2.25rem;
+    margin-bottom: 0;
+    width: 95%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E1E1E1;
+  }
 }
 .shows__concert:hover {
   background-color: #FAFAFA;
@@ -284,10 +401,20 @@ body {
   font-size: 10px;
   color: #AFAFAF;
 }
+@media (min-width: 48rem) {
+  .shows__concert-label {
+    display: none;
+  }
+}
 .shows__concert-details {
   font-size: 13px;
   line-height: 18px;
   margin: 4px 0 8px 0;
+}
+@media (min-width: 48rem) {
+  .shows__concert-details {
+    font-size: 14px;
+  }
 }
 .shows__concert-details--bold {
   font-weight: 500;
@@ -298,8 +425,7 @@ body {
   color: #FFFFFF;
   background: #323232;
   font-size: 14px;
-  font-family: "avenir-demi";
-  font-weight: 600;
+  font-weight: 500;
   line-height: 20px;
   border-radius: 4px;
   border: none;
@@ -307,116 +433,14 @@ body {
   padding: 10px;
   cursor: pointer;
 }
-
-@media screen and (min-width: 48rem) {
-  .hero {
-    padding: 0 2.25rem 0 2.25rem;
-    height: 465px;
-  }
-  .hero__album {
-    font-size: 22px;
-    font-weight: 600;
-    padding: 3.5rem 0 1rem 0;
-  }
-  .hero__band-name {
-    font-size: 56px;
-    line-height: 68px;
-    max-width: 550px;
-  }
-  .hero__soundcloud-song {
-    margin-top: 40px;
-    max-height: 135px;
-    width: 54%;
-  }
-
-  .shows__title {
-    padding: 48px 2.25rem 48px 2.25rem;
-    font-size: 36px;
-    line-height: 44px;
-  }
-  .shows__sub-headings {
-    display: flex;
-    justify-content: space-between;
-  }
-  .shows__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .shows__concert {
-    padding: 0 2.25rem 0 2.25rem;
-    margin-bottom: 0;
-    width: 95%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #E1E1E1;
-  }
-  .shows__concert-label {
-    display: none;
-  }
-  .shows__concert-label--section {
-    display: block;
-    position: absolute;
-    top: -32px;
-    font-weight: 500;
-    font-size: 12px;
-  }
-  .shows__concert-details {
-    font-size: 14px;
-  }
+@media (min-width: 48rem) {
   .shows__concert-button {
     min-width: 150px;
     width: 20%;
     margin: 16px 0 16px 0;
     font-size: 16px;
-    font-family: avenir next;
-  }
-  .shows__concert-button:hover {
-    background: #000000;
   }
 }
-@media screen and (min-width: 80rem) {
-  .header__nav-page {
-    width: 60px;
-  }
-
-  .hero {
-    padding: 0 7.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 650px;
-  }
-  .hero__album {
-    padding: 0 0 1rem 0;
-  }
-  .hero__band-name {
-    max-width: 470px;
-  }
-  .hero__soundcloud-song {
-    max-height: 130px;
-    padding-left: 220px;
-  }
-
-  .shows {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .shows__title {
-    display: inline;
-    padding: 48px 7.5rem 0 7.5rem;
-    align-self: baseline;
-  }
-  .shows__sub-headings {
-    align-self: center;
-  }
-  .shows__wrapper {
-    width: 65%;
-    margin: 0 88px;
-    padding-top: 10px;
-  }
+.shows__concert-button:hover {
+  background-color: #000000;
 }/*# sourceMappingURL=shows.css.map */
