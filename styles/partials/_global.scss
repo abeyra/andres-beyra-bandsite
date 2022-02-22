@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: Avenir Next, Avenir Demi, Avenir Regular, Arial, Helvetica, sans-serif;
+    font-family: avenir, Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -37,7 +37,7 @@ body {
         @include tablet {
             margin: 1.5rem 0 1.5rem 2.5rem;
             font-size: 2rem;
-            width: 120px;  
+            width: 7.5rem;  
         }
 
         @include desktop {
@@ -95,11 +95,11 @@ body {
     padding: 0 1rem 0 1rem;
     background-color: $bandsite-black;
     color: $white; 
-    margin-top: 16px; 
+    margin-top: 1rem; 
 
     @include tablet {
         padding: 0 2.25rem 0 2.25rem;
-        margin-top: 32px;
+        margin-top: 2rem;
         position: relative;
     }
 
@@ -117,7 +117,7 @@ body {
 
     &__title {
         font-size: 1.5rem; 
-        font-weight: 500; 
+        font-weight: 600; 
         padding-top: 2rem; 
         padding-bottom: 1rem;
 
@@ -196,7 +196,7 @@ body {
             position: absolute; 
             top: 3.5rem; 
             right: 2.25rem; 
-            width: 120px;
+            width: 7.5rem;
         }
 
         @include desktop {

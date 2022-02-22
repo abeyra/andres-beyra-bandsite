@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: Avenir Next, Avenir Demi, Avenir Regular, Arial, Helvetica, sans-serif;
+  font-family: avenir, Arial, Helvetica, sans-serif;
 }
 
 .header__nav {
@@ -46,7 +46,7 @@ body {
   .header__nav-logo {
     margin: 1.5rem 0 1.5rem 2.5rem;
     font-size: 2rem;
-    width: 120px;
+    width: 7.5rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -104,12 +104,12 @@ body {
   padding: 0 1rem 0 1rem;
   background-color: #323232;
   color: #FFFFFF;
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 @media (min-width: 48rem) {
   .footer {
     padding: 0 2.25rem 0 2.25rem;
-    margin-top: 32px;
+    margin-top: 2rem;
     position: relative;
   }
 }
@@ -127,7 +127,7 @@ body {
 }
 .footer__title {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
@@ -205,7 +205,7 @@ body {
     position: absolute;
     top: 3.5rem;
     right: 2.25rem;
-    width: 120px;
+    width: 7.5rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -221,7 +221,7 @@ body {
 
 @media screen and (min-width: 80rem) {
   .header__nav-page {
-    width: 60px;
+    width: 3.75rem;
   }
 }
 
@@ -238,7 +238,7 @@ body {
 @media (min-width: 48rem) {
   .hero {
     padding: 0 2.25rem 0 2.25rem;
-    height: 465px;
+    height: 29.0625rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -247,18 +247,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 650px;
+    height: 40.625rem;
   }
 }
 .hero__album {
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   padding: 2rem 0 1rem 0;
 }
 @media (min-width: 48rem) {
   .hero__album {
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 600;
     padding: 3.5rem 0 1rem 0;
   }
@@ -272,38 +272,38 @@ body {
   align-self: center;
   font-size: 1.5rem;
   font-weight: 600;
-  line-height: 32px;
-  max-width: 240px;
+  line-height: 2rem;
+  max-width: 15rem;
   color: #FFFFFF;
 }
 @media (min-width: 48rem) {
   .hero__band-name {
-    font-size: 56px;
-    line-height: 68px;
-    max-width: 550px;
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+    max-width: 34.375rem;
   }
 }
 @media screen and (min-width: 80rem) {
   .hero__band-name {
-    max-width: 470px;
+    max-width: 29.375rem;
   }
 }
 .hero__soundcloud-song {
-  max-height: 100px;
-  border-radius: 4px;
-  margin-top: 16px;
+  max-height: 6.25rem;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
 }
 @media (min-width: 48rem) {
   .hero__soundcloud-song {
-    margin-top: 40px;
-    max-height: 135px;
+    margin-top: 2.5rem;
+    max-height: 8.4375rem;
     width: 54%;
   }
 }
 @media screen and (min-width: 80rem) {
   .hero__soundcloud-song {
-    max-height: 130px;
-    padding-left: 220px;
+    max-height: 8.125rem;
+    padding-left: 13.75rem;
   }
 }
 
@@ -316,22 +316,22 @@ body {
   }
 }
 .shows__title {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 32px 1rem 16px 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  padding: 2rem 1rem 1rem 1rem;
 }
 @media (min-width: 48rem) {
   .shows__title {
-    padding: 48px 2.25rem 48px 2.25rem;
-    font-size: 36px;
-    line-height: 44px;
+    padding: 3rem 2.25rem 3rem 2.25rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
 }
 @media screen and (min-width: 80rem) {
   .shows__title {
     display: inline;
-    padding: 48px 7.5rem 0 7.5rem;
+    padding: 3rem 7.5rem 0 7.5rem;
     align-self: baseline;
   }
 }
@@ -339,8 +339,8 @@ body {
   display: none;
   justify-content: flex-start;
   margin: 0 3.5rem;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 0.8125rem;
+  font-weight: 550;
   color: #AFAFAF;
 }
 @media (min-width: 48rem) {
@@ -355,7 +355,7 @@ body {
   }
 }
 .shows__sub-headings-text {
-  width: 150px;
+  width: 9.375rem;
 }
 @media (min-width: 48rem) {
   .shows__wrapper {
@@ -367,14 +367,14 @@ body {
 @media screen and (min-width: 80rem) {
   .shows__wrapper {
     width: 65%;
-    margin: 0 88px;
-    padding-top: 10px;
+    margin: 0 5.5rem;
+    padding-top: 0.625rem;
   }
 }
 .shows__concert {
   padding: 0 1rem 0 1rem;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #E1E1E1;
+  margin-bottom: 1rem;
+  border-bottom: 0.0625rem solid #E1E1E1;
 }
 @media (min-width: 48rem) {
   .shows__concert {
@@ -385,7 +385,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 0.0625rem solid #E1E1E1;
   }
 }
 .shows__concert:hover {
@@ -395,11 +395,12 @@ body {
   background-color: #E1E1E1;
 }
 .shows__concert-details-container {
-  width: 123px;
+  width: 7.8125rem;
 }
 .shows__concert-label {
-  font-size: 10px;
+  font-size: 0.625rem;
   color: #AFAFAF;
+  font-weight: 600;
 }
 @media (min-width: 48rem) {
   .shows__concert-label {
@@ -407,38 +408,39 @@ body {
   }
 }
 .shows__concert-details {
-  font-size: 13px;
-  line-height: 18px;
-  margin: 4px 0 8px 0;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  margin: 0.25rem 0 0.5rem 0;
 }
 @media (min-width: 48rem) {
   .shows__concert-details {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .shows__concert-details--bold {
-  font-weight: 500;
+  font-weight: 600;
 }
 .shows__concert-button {
   width: 100%;
-  height: 40px;
+  height: 2.5rem;
   color: #FFFFFF;
   background: #323232;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  border-radius: 4px;
+  font-size: 0.875rem;
+  font-family: "avenir";
+  font-weight: 600;
+  line-height: 1.25rem;
+  border-radius: 0.25rem;
   border: none;
-  margin: 8px 0 16px 0;
-  padding: 10px;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0.625rem;
   cursor: pointer;
 }
 @media (min-width: 48rem) {
   .shows__concert-button {
-    min-width: 150px;
+    min-width: 9.375rem;
     width: 20%;
-    margin: 16px 0 16px 0;
-    font-size: 16px;
+    margin: 1rem 0 1rem 0;
+    font-size: 1rem;
   }
 }
 .shows__concert-button:hover {

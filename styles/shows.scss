@@ -8,7 +8,7 @@
 
             &-page {
                 @include desktop {
-                    width: 60px; 
+                    width: 3.75rem; 
                 }
             }
         }
@@ -26,7 +26,7 @@
 
     @include tablet {
         padding: 0 2.25rem 0 2.25rem;
-        height: 465px;
+        height: 29.0625rem;
     }
 
     @include desktop {
@@ -34,17 +34,17 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 650px; 
+        height: 40.625rem; 
     }
 
     &__album {
         color: $white; 
-        font-size: 14px;
+        font-size: .875rem;
         font-weight: 500;
         padding: 2rem 0 1rem 0; 
 
         @include tablet {
-            font-size: 22px;
+            font-size: 1.375rem;
             font-weight: 600;
             padding: 3.5rem 0 1rem 0;
         }
@@ -58,35 +58,35 @@
         align-self: center;
         font-size: 1.5rem; 
         font-weight: 600; 
-        line-height: 32px;
-        max-width: 240px;
+        line-height: 2rem;
+        max-width: 15rem;
         color: $white; 
 
         @include tablet {
-            font-size: 56px;
-            line-height: 68px;
-            max-width: 550px;
+            font-size: 3.5rem;
+            line-height: 4.25rem;
+            max-width: 34.375rem;
         }
 
         @include desktop {
-            max-width: 470px;
+            max-width: 29.375rem;
         }
     }
 
     &__soundcloud-song {
-        max-height: 100px; 
-        border-radius: 4px;
-        margin-top: 16px;
+        max-height: 6.25rem; 
+        border-radius: .25rem;
+        margin-top: 1rem;
 
         @include tablet {
-            margin-top: 40px;
-            max-height: 135px;
+            margin-top: 2.5rem;
+            max-height: 8.4375rem;
             width: 54%;
         }
 
         @include desktop {
-            max-height: 130px; 
-            padding-left: 220px; 
+            max-height: 8.125rem; 
+            padding-left: 13.75rem; 
         }
     }
 }
@@ -100,20 +100,20 @@
     }
 
     &__title {
-        font-size: 24px; 
-        line-height: 32px;
-        font-weight: 500; 
-        padding: 32px 1rem 16px 1rem;
+        font-size: 1.5rem; 
+        line-height: 2rem;
+        font-weight: 600; 
+        padding: 2rem 1rem 1rem 1rem;
 
         @include tablet {
-            padding: 48px 2.25rem 48px 2.25rem;
-            font-size: 36px;
-            line-height: 44px;
+            padding: 3rem 2.25rem 3rem 2.25rem;
+            font-size: 2.25rem;
+            line-height: 2.75rem;
         }
 
         @include desktop {
             display: inline;
-            padding: 48px 7.5rem 0 7.5rem; 
+            padding: 3rem 7.5rem 0 7.5rem; 
             align-self: baseline;
         }
     }
@@ -122,8 +122,8 @@
         display: none;
         justify-content: flex-start;
         margin: 0 3.5rem;
-        font-size: 13px;
-        font-weight: 500;
+        font-size: .8125rem;
+        font-weight: 550;
         color: $silver;
 
         @include tablet {
@@ -136,7 +136,7 @@
         }
 
         &-text {
-            width: 150px;
+            width: 9.375rem;
         }
     }
 
@@ -149,15 +149,15 @@
 
         @include desktop {
             width: 65%; 
-            margin: 0 88px; 
-            padding-top: 10px; 
+            margin: 0 5.5rem; 
+            padding-top: .625rem; 
         }
     }
 
     &__concert {
         padding: 0 1rem 0 1rem;
-        margin-bottom: 16px; 
-        border-bottom: 1px solid $mercury;
+        margin-bottom: 1rem; 
+        border-bottom: .0625rem solid $mercury;
         
         @include tablet {
             padding: 0 2.25rem 0 2.25rem;
@@ -167,7 +167,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid $mercury; 
+            border-bottom: .0625rem solid $mercury; 
         }
 
         &:hover {
@@ -179,12 +179,13 @@
         }
 
         &-details-container {
-            width: 123px;
+            width: 7.8125rem;
         }
 
         &-label {
-            font-size: 10px; 
-            color: $silver; 
+            font-size: .625rem; 
+            color: $silver;
+            font-weight: 600; 
 
             @include tablet {
                 display: none;
@@ -192,173 +193,44 @@
         }
 
         &-details {
-            font-size: 13px;
-            line-height: 18px;
-            margin: 4px 0 8px 0; 
+            font-size: .8125rem;
+            line-height: 1.125rem;
+            margin: .25rem 0 .5rem 0; 
 
             @include tablet {
-                font-size: 14px; 
+                font-size: .875rem; 
             }
 
             &--bold {
-                font-weight: 500;
+                font-weight: 600;
             }
         }
 
         &-button {
             width: 100%; 
-            height: 40px; 
+            height: 2.5rem; 
             color: $white;
             background: $bandsite-black;
-            font-size: 14px; 
-            font-weight: 500;
-            line-height: 20px;
-            border-radius: 4px;
+            font-size: .875rem; 
+            font-family: 'avenir';
+            font-weight: 600;
+            line-height: 1.25rem;
+            border-radius: .25rem;
             border: none;
-            margin: 8px 0 16px 0;
-            padding: 10px;
+            margin: .5rem 0 1rem 0;
+            padding: .625rem;
             cursor: pointer;
 
             @include tablet {
-                min-width: 150px; 
+                min-width: 9.375rem; 
                 width: 20%; 
-                margin: 16px 0 16px 0; 
-                font-size: 16px; 
+                margin: 1rem 0 1rem 0; 
+                font-size: 1rem; 
             }
 
             &:hover {
                 background-color: $bandsite-darkblack;
             }
         }
-    }
-}
-
-@media screen and (min-width: 48rem) {
-
-    .hero {
-        // padding: 0 2.25rem 0 2.25rem;
-        // height: 465px;
-
-        // &__album {
-        //     font-size: 22px;
-        //     font-weight: 600;
-        //     padding: 3.5rem 0 1rem 0;
-        // }
-
-        // &__band-name {
-        //     font-size: 56px;
-        //     line-height: 68px;
-        //     max-width: 550px;
-        // }
-
-        // &__soundcloud-song {
-        //     margin-top: 40px;
-        //     max-height: 135px;
-        //     width: 54%;
-        // }
-    }
-
-    .shows {
-        // &__title {
-        //     padding: 48px 2.25rem 48px 2.25rem;
-        //     font-size: 36px;
-        //     line-height: 44px;
-        // }
-
-        // &__sub-headings {
-        //     display: flex;
-        //     justify-content: space-between;
-        // }
-
-        // &__wrapper {
-        //     display: flex;
-        //     flex-direction: column;
-        //     align-items: center;
-        // }
-
-        &__concert {
-            // padding: 0 2.25rem 0 2.25rem;
-            // margin-bottom: 0; 
-            // width: 95%; 
-            // position: relative;
-            // display: flex;
-            // justify-content: space-between;
-            // align-items: center;
-            // border-bottom: 1px solid $mercury; 
-
-            &-label {
-                // display: none;
-            }
-
-            // &-details {
-            //     font-size: 14px; 
-            // }
-
-            &-button {
-                // min-width: 150px; 
-                // width: 20%; 
-                // margin: 16px 0 16px 0; 
-                // font-size: 16px; 
-
-                // &:hover {
-                //     background: $bandsite-darkblack; 
-                // }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 80rem) {
-    // .header {
-    //     &__nav{
-
-    //         &-page {
-    //             width: 60px; 
-    //         }
-    //     }
-    // }
-
-    .hero {
-        // padding: 0 7.5rem; 
-        // display: flex;
-        // align-items: center;
-        // justify-content: space-between;
-        // height: 650px; 
-       
-        // &__album {
-        //     padding: 0 0 1rem 0; 
-        // }
-
-        // &__band-name {
-        //     max-width: 470px;
-        // }
-
-        // &__soundcloud-song {
-        //     max-height: 130px; 
-        //     padding-left: 220px; 
-        // }
-    }
-
-    .shows {
-        // position: relative;
-        // display: flex;
-        // flex-direction: column;
-        // align-items: flex-end;
-
-        // &__title {
-        //     display: inline;
-        //     padding: 48px 7.5rem 0 7.5rem; 
-        //     align-self: baseline;
-        // }
-
-        // &__sub-headings {
-        //     align-self: center;
-        // }
-
-        // &__wrapper {
-        //     width: 65%; 
-        //     margin: 0 88px; 
-        //     padding-top: 10px; 
-        // }
     }
 }

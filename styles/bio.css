@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: Avenir Next, Avenir Demi, Avenir Regular, Arial, Helvetica, sans-serif;
+  font-family: avenir, Arial, Helvetica, sans-serif;
 }
 
 .header__nav {
@@ -46,7 +46,7 @@ body {
   .header__nav-logo {
     margin: 1.5rem 0 1.5rem 2.5rem;
     font-size: 2rem;
-    width: 120px;
+    width: 7.5rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -104,12 +104,12 @@ body {
   padding: 0 1rem 0 1rem;
   background-color: #323232;
   color: #FFFFFF;
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 @media (min-width: 48rem) {
   .footer {
     padding: 0 2.25rem 0 2.25rem;
-    margin-top: 32px;
+    margin-top: 2rem;
     position: relative;
   }
 }
@@ -127,7 +127,7 @@ body {
 }
 .footer__title {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
@@ -205,7 +205,7 @@ body {
     position: absolute;
     top: 3.5rem;
     right: 2.25rem;
-    width: 120px;
+    width: 7.5rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -244,7 +244,7 @@ body {
 .hero__text {
   align-self: center;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 550;
   color: #FFFFFF;
 }
 @media (min-width: 48rem) {
@@ -270,7 +270,7 @@ body {
 }
 .band-info__title {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
@@ -313,7 +313,7 @@ body {
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 @media (min-width: 48rem) {
   .band-info__quote-statement {
@@ -383,7 +383,7 @@ body {
 }
 .photo-gallery__title {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   margin: 0 1rem 0 1rem;
@@ -437,7 +437,7 @@ body {
 }
 .comments__title {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 1rem 0;
 }
 @media (min-width: 48rem) {
@@ -457,28 +457,28 @@ body {
   }
 }
 .comments__input-container {
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 0.0625rem solid #E1E1E1;
 }
 .comments__avatar-img {
   background-image: url(../assets/images/Mohan-muruge.jpg);
   background-position: center;
   background-size: contain;
   background-color: #E1E1E1;
-  max-width: 36px;
-  max-height: 36px;
-  height: 36px;
-  width: 36px;
+  max-width: 2.25rem;
+  max-height: 2.25rem;
+  height: 2.25rem;
+  width: 2.25rem;
   border-radius: 50%;
   float: left;
-  margin: 26px 16px 0 0;
+  margin: 1.625rem 1rem 0 0;
 }
 @media (min-width: 48rem) {
   .comments__avatar-img {
-    max-width: 48px;
-    max-height: 48px;
-    width: 48px;
-    height: 48px;
-    margin-right: 12px;
+    max-width: 3rem;
+    max-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.75rem;
   }
 }
 .comments__form {
@@ -487,60 +487,60 @@ body {
 }
 .comments__form-label {
   color: #AFAFAF;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 500;
-  line-height: 20px;
-  margin-bottom: 4px;
+  line-height: 1.25rem;
+  margin-bottom: 0.25rem;
 }
 @media (min-width: 48rem) {
   .comments__form-label {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 .comments__form-field {
-  min-height: 36px;
+  min-height: 2.25rem;
   width: 100%;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: avenir;
-  border-radius: 4px;
-  border: 1px solid #E1E1E1;
-  padding: 10px;
-  margin-bottom: 16px;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #E1E1E1;
+  padding: 0.625rem;
+  margin-bottom: 1rem;
   background-color: #FAFAFA;
 }
 @media (min-width: 48rem) {
   .comments__form-field {
-    min-height: 48px;
-    padding: 16px;
+    min-height: 3rem;
+    padding: 1rem;
   }
 }
 .comments__form-field:focus {
-  border: 1px solid #323232;
+  border: 0.0625rem solid #323232;
   outline: none;
 }
 .comments__form-field:invalid {
-  border: 1px solid #D22D2D;
+  border: 0.0625rem solid #D22D2D;
 }
 .comments__form-field--comment {
   resize: none;
-  height: 100px;
+  height: 6.25rem;
 }
 .comments__form-button {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   color: #FFFFFF;
   background: #323232;
-  padding: 10px;
-  border-radius: 4px;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 @media (min-width: 48rem) {
   .comments__form-button {
     width: 30%;
     align-self: flex-end;
-    margin: 8px 0 24px 0;
+    margin: 0.5rem 0 1.5rem 0;
   }
 }
 .comments__form-button:hover {
@@ -548,29 +548,29 @@ body {
 }
 .comments__post {
   position: relative;
-  padding: 16px 0 16px 0;
-  border-bottom: 1px solid #E1E1E1;
+  padding: 1rem 0 1rem 0;
+  border-bottom: 0.0625rem solid #E1E1E1;
 }
 @media (min-width: 48rem) {
   .comments__post {
-    padding: 24px 0 24px 0;
+    padding: 1.5rem 0 1.5rem 0;
   }
 }
 .comments__post-circle {
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   float: left;
-  margin-top: -4px;
-  margin-right: 16px;
+  margin-top: -0.25rem;
+  margin-right: 1rem;
   background-color: #E1E1E1;
 }
 @media (min-width: 48rem) {
   .comments__post-circle {
-    max-width: 48px;
-    max-height: 48px;
-    width: 48px;
-    height: 48px;
+    max-width: 3rem;
+    max-height: 3rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 .comments__post-content {
@@ -578,34 +578,34 @@ body {
   flex-direction: column;
 }
 .comments__post-author {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 0.8125rem;
+  font-weight: 600;
 }
 @media (min-width: 48rem) {
   .comments__post-author {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .comments__post-date {
   position: absolute;
   right: 0;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #AFAFAF;
 }
 @media (min-width: 48rem) {
   .comments__post-date {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .comments__post-message {
-  font-size: 13px;
-  line-height: 18px;
-  margin-top: 8px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  margin-top: 0.5rem;
   opacity: 0.9;
 }
 @media (min-width: 48rem) {
   .comments__post-message {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }/*# sourceMappingURL=bio.css.map */
