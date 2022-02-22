@@ -218,6 +218,11 @@ body {
   line-height: 1.125rem;
   margin: 1rem 0 1rem 0;
 }
+@media (min-width: 48rem) {
+  .footer__copyright-text {
+    font-size: 0.875rem;
+  }
+}
 
 @media screen and (min-width: 80rem) {
   .header__nav-page {
@@ -238,7 +243,7 @@ body {
 @media (min-width: 48rem) {
   .hero {
     padding: 0 2.25rem 0 2.25rem;
-    height: 29.0625rem;
+    height: 100vh;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -247,7 +252,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 40.625rem;
   }
 }
 .hero__album {
@@ -351,11 +355,13 @@ body {
 }
 @media screen and (min-width: 80rem) {
   .shows__sub-headings {
-    align-self: center;
+    width: 65%;
+    justify-content: flex-start;
+    margin: 0 2rem;
   }
 }
 .shows__sub-headings-text {
-  width: 9.375rem;
+  width: 11.875rem;
 }
 @media (min-width: 48rem) {
   .shows__wrapper {
@@ -426,8 +432,6 @@ body {
   color: #FFFFFF;
   background: #323232;
   font-size: 0.875rem;
-  font-family: "avenir";
-  font-weight: 600;
   line-height: 1.25rem;
   border-radius: 0.25rem;
   border: none;

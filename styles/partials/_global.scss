@@ -208,5 +208,9 @@ body {
         font-size: .8125rem;
         line-height: 1.125rem;
         margin: 1rem 0 1rem 0;  
+
+        @include tablet {
+            font-size: .875rem;
+        }
     }
 }
