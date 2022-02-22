@@ -243,12 +243,13 @@ body {
 @media (min-width: 48rem) {
   .hero {
     padding: 0 2.25rem 0 2.25rem;
-    height: 100vh;
+    height: 29.0625rem;
   }
 }
 @media screen and (min-width: 80rem) {
   .hero {
     padding: 0 7.5rem;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
